@@ -1,5 +1,5 @@
 
-        gsap.from(".js__fade-in01",1.5,{
+        gsap.from(".js__fade-in01",1,{
         opacity:0,
         y: 50,
         scrollTrigger: {
@@ -9,7 +9,7 @@
         },
       });
       
-    gsap.from(".js__fade-in02",1.5,{
+    gsap.from(".js__fade-in02",1,{
         opacity:0,
         y: 50,
         scrollTrigger: {
@@ -17,7 +17,7 @@
           start: "top center", // アニメーション開始位置
         },
       });
-    gsap.from(".js__fade-in03",1.5,{
+    gsap.from(".js__fade-in03",1,{
         opacity:0,
         y: 50,
         scrollTrigger: {
@@ -25,7 +25,7 @@
           start: "top center", // アニメーション開始位置
         },
       });
-    gsap.from(".js__fade-in04",1.5,{
+    gsap.from(".js__fade-in04",1,{
         opacity:0,
         y: 50,
         scrollTrigger: {
@@ -33,7 +33,7 @@
           start: "top center", // アニメーション開始位置
         },
       });
-    gsap.from(".js__fade-in05",1.5,{
+    gsap.from(".js__fade-in05",1,{
         opacity:0,
         y: 50,
         scrollTrigger: {
@@ -43,7 +43,7 @@
       });
     
     
-    gsap.from(".js-fade-left01",1.5,{
+    gsap.from(".js-fade-left01",1,{
         opacity:0,
         x: 10,
         scrollTrigger: {
@@ -51,7 +51,7 @@
           start: "top center", // アニメーション開始位置
         },
       });
-    gsap.from(".js-fade-right",1.5,{
+    gsap.from(".js-fade-right",1,{
         opacity:0,
         x: -10,
         scrollTrigger: {
@@ -59,7 +59,7 @@
           start: "top center", // アニメーション開始位置
         },
       });
-    gsap.from(".js-fade-left02",1.5,{
+    gsap.from(".js-fade-left02",1,{
         opacity:0,
         x:  10,
         scrollTrigger: {
