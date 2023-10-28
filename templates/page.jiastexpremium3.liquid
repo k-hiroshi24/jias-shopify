@@ -1,0 +1,941 @@
+{{ 'gsap.js' | asset_url | script_tag }}
+
+<style>
+  .en-font {
+    font-family: "garamond-premier-pro"
+    , serif;
+    font-style: normal;
+    font-size: 100px;
+  }
+
+  body {
+    font-family: "fot-tsukumin-pr6n"
+    , sans-serif;
+    font-style: normal;
+    line-height: 2;
+}
+.all-wrapper{
+   /* max-width: 1440px;
+   width: 100%;
+   margin: 0 auto; */
+
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  buttom {
+    background-color: #E1E1D1 !important;
+  }
+
+  .common-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 0 auto;
+    padding: 0.8em 2em;
+    border: none;
+    border-radius: 35px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 21px;
+    font-family: "canada-type-gibson"
+    , sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    transition: all 0.6s;
+  }
+  .common-button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .common-button--bg-black {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 0 auto;
+    padding: 0.8em 2em;
+    border: 1px solid #fff;
+    border-radius: 35px;
+    background-color: #1a1311;
+    color: #fff;
+    font-size: 21px;
+    font-family: "canada-type-gibson"
+    , sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    transition: all 0.6s;
+  }
+  .common-button--bg-black:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .mb-36 {
+    margin-bottom: 36px;
+  }
+
+  .mb-62 {
+    margin-bottom: 62px;
+  }
+  .mb-100{
+    margin-bottom: 100px;
+  }
+
+  .mb-12 {
+    margin-bottom: 12px;
+  }
+  @media screen and (max-width: 768px) {
+    .mb-36 {
+      margin-bottom: 24px;
+    }
+
+    .mb-62 {
+      margin-bottom: 36px;
+    }
+
+
+  }
+  .scroll {
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0 100px;
+    position: relative;
+    z-index: 0;
+
+
+    /*
+   top : 50%;
+   left : 50%;
+   transform: translateX(-50%) translateY(-50%);
+*/
+  }
+  .scroll::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 45px;
+    background-color: #fff;
+    top: calc(50% - 80px);
+    left: calc(50% - 5px);
+    transform: translate(-50% , -50%);
+    z-index: -1;
+  }
+
+  .yazirusi {
+    display: inline-flex;
+    transform: rotate(90deg);
+    position: relative;
+  }
+  .yazirusi::after {
+    content: '';
+    width: 75px;
+    height: 10px;
+    border-bottom: solid 1px;
+    border-right: solid 1px;
+    transform: skew(45deg);
+  }
+
+
+  .FV-section__wrapper {
+    background-image: url('{{ 'bg-img5.png' | asset_url }}');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* FVの右上の円 */
+  .FV-section__wrapper::before {
+    position: absolute;
+    content: "";
+    width: 800px;
+    height: 800px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    top: -10%;
+    right: -40%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* FV */
+  .FV {}
+
+.FV__wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 11px;
+}
+
+.FV__img01 {
+  width: 65%;
+  aspect-ratio: 374 / 406;
+  object-fit: cover;
+}
+
+.FV__img01 img {
+  aspect-ratio: 374 / 406;
+  object-fit: cover;
+}
+
+.FV__img02 {
+  width: 35%;
+  aspect-ratio: 208 / 261;
+  object-fit: cover;
+}
+
+.FV__img02 img {
+  aspect-ratio: 208 / 261;
+  object-fit: cover;
+}
+
+.FV__wrapper {
+  display: flex;
+}
+
+.FV__logo-img {
+  width: 60%;
+  margin: 64px auto;
+}
+
+/* secton1 */
+.section01 {
+  padding-bottom: 180px;
+  position: relative;
+}
+
+.section01__title {
+  color: #fff;
+  font-size: 42px;
+  text-align: center;
+}
+
+
+.img-with-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 140px;
+}
+
+
+.img-with-text__img {
+  width: 50%;
+}
+
+
+.img-with-text__img img {
+  aspect-ratio: 244 / 292;
+  object-fit: cover;
+}
+
+.text__box {
+  padding: 62px;
+  width: 50%;
+}
+
+
+.text__box p {
+  color: #fff;
+  font-size: 24px;
+  line-height: calc(50 / 24);
+}
+
+.section__wrapper {
+  padding: 65px 0 300px;
+  background: url('{{ 'bg-img2.png' | asset_url }}');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: top 85% left;
+  position: relative;
+  z-index: 0;
+}
+
+.section__wrapper::after {
+  position: absolute;
+  content: "";
+  background: url('{{ 'bg-img3.png' | asset_url }}');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  z-index: -10;
+  width: 700px;
+  height: 1400px;
+  display: inline-block;
+}
+
+.section__wrapper::before {
+  position: absolute;
+  content: "";
+  background: url('{{ 'bg-img4.png' | asset_url }}');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  z-index: -5;
+  width: 100%;
+  height: 1200px;
+  display: inline-block;
+}
+
+/* footer背景 */
+.section__wrapper__inner::before {
+  position: absolute;
+  content: "";
+  background: url('{{ 'bg-img6.png' | asset_url }}');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+}
+
+
+.section02 {}
+
+.section02__inner {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section02__inner p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.en-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 32px;
+}
+
+.sub-title {
+  margin-bottom: 45px;
+}
+
+.movie {}
+
+.movie__box {
+  width: 75%;
+  margin: 0 auto 45px;
+}
+
+.movie__box img {
+  aspect-ratio: 394 / 234;
+  object-fit: cover;
+}
+
+.section03 {
+  overflow-x: hidden;
+}
+
+.section03__title {
+  text-align: center;
+  padding: 200px 0 100px;
+  position: relative;
+}
+
+.section03__title ::after {
+  position: absolute;
+  content: "";
+  top: calc(50% + 100px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 60px;
+  background-color: #b5b4a5;
+}
+
+.section03__title ::before {
+  position: absolute;
+  content: "";
+  top: calc(50% + -15px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 100px;
+  background-color: #b5b4a5;
+}
+
+.section03__title h3 {
+  font-size: 24px;
+}
+
+.img-title-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 34px;
+  align-items: center;
+  position: relative;
+}
+
+
+.img-title-img__img img {
+  aspect-ratio: 196 / 230;
+  object-fit: cover;
+}
+
+.img-title-img__text {
+  position: relative;
+}
+.img-title-img__text p {
+  font-size: 16px;
+}
+
+.img-title-img__text-box {
+  position: absolute;
+  top: calc(50% - 35px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.img-title-img__text img {
+  width: 250px;
+}
+
+.img-title-img__icon-title {
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.5;
+  position: absolute;
+}
+.img-title-img__icon-title img {
+  position: relative;
+  width: 210px;
+  height: 195px;
+
+}
+
+.bg-img-right {
+  width: 80%;
+  margin-left: auto;
+  overflow-x: hidden;
+
+}
+.bg-img-left {
+  width: 80%;
+  margin-right: auto;
+}
+
+.section03 {}
+
+.img-title-img__icon-title span {
+  font-size: 42px;
+}
+
+.img-title-img__text p {
+  text-align: center;
+  padding-top: 300px;
+}
+
+.section03__bg-img01 {
+  background-image: url('{{ 'JIAS-img1.jpg' | asset_url }}');
+  background-position: center;
+  background-size: cover;
+  width: 80%;
+  height: 430px;
+  margin-left: auto;
+  border-radius: 250px 0 0 250px;
+}
+
+.section03__bg-img02 {
+  background-image: url('{{ 'JIAS-img10.jpg' | asset_url }}');
+  background-position: center;
+  background-size: cover;
+  width: 80%;
+  height: 430px;
+  margin-right: auto;
+  border-radius: 0 250px 250px 0;
+}
+
+.section03__bg-img03 {
+  background-image: url('{{ 'JIAS-img5.jpg' | asset_url }}');
+  background-position: center;
+  background-size: cover;
+  width: 80%;
+  height: 430px;
+  margin-left: auto;
+  border-radius: 250px 0 0 250px;
+}
+
+.footer {
+  position: relative;
+  z-index: 0;
+  top: -150px;
+
+}
+.common-button--reservation {
+  position: absolute;
+  top: calc(50% + 250px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  margin: 0 auto;
+  padding: 0.9em 2em;
+  border: none;
+  color: #000000;
+  font-weight: 600;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  font-family: "canada-type-gibson"
+  , sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  transition: all 0.6s;
+  background: #E1E1D1
+}
+
+.common-button--reservation:hover {
+  color: #8f8e8e;
+}
+
+.common-button--reservation span {
+  display: block;
+  font-size: 18px;
+  font-family: "fot-tsukumin-pr6n"
+  , sans-serif;
+  font-style: normal;
+  line-height: 2;
+}
+
+.common-button--reservation::after {
+  position: absolute;
+  content: "";
+  background: url('{{ 'title-bg-ring6.png' | asset_url }}');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 250px;
+  z-index: -1;
+}
+
+.section03__bg-img01__wrapper,
+.section03__bg-img02__wrapper,
+.section03__bg-img03__wrapper {
+  padding: 150px 0 250px;
+  position: relative;
+}
+.line {
+  display: flex;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.line span {
+  border-right: 1px solid #b5b4a5;
+  height: 100%;
+  width: 50%;
+  z-index: -1;
+}
+
+
+@media screen and (max-width: 768px) {
+  .section01 {
+    padding-bottom: 80px;
+    position: relative;
+  }
+
+  .section01__title {
+    font-size: 24px;
+  }
+
+  .img-with-text {
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  .img-with-text__img {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .text__box {
+    padding: 24px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .text__box p {
+    font-size: 15px;
+  }
+  .section__wrapper::after {
+    width: 350px;
+    height: 700px;
+
+  }
+  .section02__inner p {
+    font-size: 16px;
+  }
+  .movie__box {
+    width: 90%;
+    margin: 0 auto 45px;
+  }
+
+  .section03__title h3 {
+    font-size: 18px;
+  }
+
+  .img-title-img {
+    display: grid;
+    grid-template-columns: 0.8fr 1.4fr 0.8fr;
+    gap: 15px;
+    align-items: center;
+    position: relative;
+  }
+
+  .img-title-img__img img {
+    aspect-ratio: 2 / 4;
+    object-fit: cover;
+  }
+
+  .img-title-img__text p {
+    font-size: 10px;
+    padding-top: 130px;
+  }
+
+  .img-title-img__icon-title span {
+    font-size: 28px;
+  }
+  .img-title-img__text img {
+    width: 135px;
+  }
+
+  .section03__bg-img01 {
+    width: 90%;
+    height: 150px;
+  }
+  .section03__bg-img02 {
+    width: 90%;
+    height: 150px;
+  }
+
+  .section03__bg-img03 {
+    width: 90%;
+    height: 150px;
+
+  }
+
+  .section03__title {
+
+    padding: 100px 0 150px;
+
+  }
+  .section03__title ::before {
+    top: calc(50% - 70px);
+    width: 2px;
+    height: 60px;
+
+  }
+  .section03__title ::after {
+    top: calc(50% + 50px);
+    width: 2px;
+    height: 100px;
+
+  }
+  .section03__bg-img01__wrapper,
+  .section03__bg-img02__wrapper,
+  .section03__bg-img03__wrapper {
+    padding: 100px 0;
+  }
+
+  .common-button {
+    width: 200px;
+    margin: 0 auto 12px;
+    font-size: 18px;
+  }
+  .common-button--bg-black {
+    width: 200px;
+    font-size: 18px;
+  }
+
+  .common-button--reservation {
+    top: calc(50% + 150px);
+
+  }
+  .section__wrapper__inner::before {
+    bottom: 0;
+    height: 700px;
+  }
+  .img-with-text__img img {
+    aspect-ratio: 242 / 238;
+  }
+
+  .FV-section__wrapper::before {
+    width: 250px;
+    height: 250px;
+    top: -5%;
+    right: -10%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .FV-section__wrapper::before {
+    width: 250px;
+    height: 250px;
+    top: -5%;
+    right: -35%;
+  }
+
+  .FV__logo-img {
+    margin: 32px auto;
+  }
+}
+</style>
+
+<div class="all-wrapper">
+  <div class="FV-section__wrapper">
+    <section class="FV">
+      <div class="FV__wrapper">
+        <div class="FV__img01">
+          <img src="{{ 'JIAS-img4.jpg' | asset_url }}" alt="" />
+        </div>
+        <div class="FV__img02">
+          <img src="{{ 'JIAS-img9.jpg' | asset_url }}" alt="" />
+        </div>
+      </div>
+      <div class="FV__logo-img">
+        <img src="{{ 'logo-img.png' | asset_url }}" alt="" />
+      </div>
+
+      <div class="scroll">
+        <p>scroll</p>
+        <p class="yazirusi"></p>
+      </div>
+    </section>
+
+    <section class="section01">
+      <h2 class="section01__title mb-36 ja-font u--fadeIn js__fade-in01">
+        本物のファブリックを。
+      </h2>
+
+      <div class="img-with-text">
+        <div class="img-with-text__img">
+          <img src="{{ 'JIAS-img6.jpg' | asset_url }}" alt="" />
+        </div>
+
+        <div class="text__box">
+          <p class="mb-62">感覚的に、心が動くもの。</p>
+          <p class="mb-62">
+            高い技術力で生み出されるファブリックはアートと 
+                  なるような存在で、はっとする大胆さや儚いほどの
+                  繊細さをもち、その時々に豊かな表情をのぞかせます。
+                  国内外屈指の高級メーカーと取り組み、
+                  世界中の逸品を揃えた自慢のコレクション。
+          </p>
+          <p>
+            何気ない日常が、特別なひとときに変わる瞬間を 
+                  ジアスがお届けします。
+          </p>
+        </div>
+      </div>
+
+      <button class="common-button mb-12">Check the Item</button>
+      <button class="common-button--bg-black">Catalog</button>
+    </section>
+  </div>
+
+  <div class="section__wrapper">
+    <div class="section__wrapper__inner">
+      <!-- movie section -->
+      <section class="section02">
+        <div class="section02__inner">
+          <h2 class="en-title en-font js__fade-in02">Phase of Mind.</h2>
+          <p class="sub-title">
+            ふり返ったり、前を向いたり。<br/>
+            あたらしいあなたに会いに行こう。
+          </p>
+          <div class="movie">
+            <div class="movie__box">
+              <!-- <img src="img/JIAS-img1.jpg" alt="" /> -->
+              <div style="padding: 56.25% 0 0 0; position: relative">
+                <iframe
+                  src="https://player.vimeo.com/video/878128881?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479"
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  style="
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                        "
+                  title="JIASTEX PREMIUM"></iframe>
+              </div>
+            </div>
+            <p class="mb-62">
+              あなた自身を形成する、いくつもの層。<br/>
+              自分らしさは幾重にも重ねられた<br/>
+              「あなた」でできている。
+            </p>
+            <p class="mb-62">
+              表面をとぎすまし、混沌に浸り、<br/>
+              時には不確かなものに向きあう。
+            </p>
+            <p>
+              いろんなあなたを見てきたけど、 <br/>
+              次はどこへ行く？
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section03">
+        <!-- 1 -->
+        <div class="section03__title en-font">
+          <h3>Category</h3>
+        </div>
+        <div class="img-title-img">
+          <div class="img-title-img__img">
+            <img src="{{ 'JIAS-img8.jpg' | asset_url }}" alt="" />
+          </div>
+
+          <div class="img-title-img__text">
+            <div class="img-title-img__text-box">
+              <span class="img-title-img__icon-title js__fade-in03">
+                Phase of <br/>
+                <span>Float</span>
+              </span>
+              <img src="{{ 'title_bg-ring2.png' | asset_url }}" alt="">
+            </div>
+            <p>
+              周りを漂い、醸し出すもの。 <br/>
+              なだらかなようで波打つ表面は、<br/>
+              気付かぬうちに変化する。
+            </p>
+          </div>
+
+          <div class="img-title-img__img">
+            <img src="{{ 'JIAS-img2.jpg' | asset_url }}" alt="" />
+          </div>
+        </div>
+
+        <div class="section03__bg-img01__wrapper">
+          <div class="line">
+            <span></span>
+          </div>
+          <figure class="bg-img-right js-fade-left01">
+            <img src="{{ 'bg-img01.png' | asset_url }}" alt="">
+          </figure>
+        </div>
+      </section>
+
+      <section class="section03">
+        <!-- 2 -->
+        <div class="img-title-img">
+          <div class="img-title-img__img">
+            <img src="{{ 'JIAS-img3.jpg' | asset_url }}" alt="" />
+          </div>
+
+          <div class="img-title-img__text">
+            <div class="img-title-img__text-box">
+              <span class="img-title-img__icon-title icon-title02 js__fade-in04">
+                Phase of <br/>
+                <span>Chaos</span>
+              </span>
+              <img src="{{ 'title_bg-ring3.png' | asset_url }}" alt="">
+            </div>
+            <p>
+              衝動と高揚。<br/>
+              一瞬できらめき、ゆらめく<br/>
+              あらゆるものの混沌に浸る。
+            </p>
+          </div>
+
+          <div class="img-title-img__img">
+            <img src="{{ 'JIAS-img11.png' | asset_url }}" alt="" />
+          </div>
+        </div>
+
+        <div class="section03__bg-img02__wrapper">
+          <div class="line">
+            <span></span>
+          </div>
+          <figure class="bg-img-left js-fade-right">
+            <img src="{{ 'bg-img02.png' | asset_url }}" alt="">
+          </figure>
+        </div>
+
+      <!-- <div class="section03__bg-img02"></div> -->
+      </section>
+
+      <section class="section03">
+        <!-- 3 -->
+        <div class="img-title-img">
+          <div class="img-title-img__img">
+            <img src="{{ 'JIAS-img7.jpg' | asset_url }}" alt="" />
+          </div>
+
+          <div class="img-title-img__text">
+            <div class="img-title-img__text-box">
+              <span class="img-title-img__icon-title icon-title03 js__fade-in05">
+                Phase of <br/>
+                <span>Unknown</span>
+              </span>
+              <img src="{{ 'title_bg-ring4.png' | asset_url }}" alt="">
+            </div>
+            <p>
+              深く潜り、探求する。<br/>
+              見知らぬ場所の、 <br/>
+              誰も知り得ない私自身。
+            </p>
+          </div>
+
+          <div class="img-title-img__img">
+            <img src="{{ 'JIAS-img12.png' | asset_url }}" alt="" />
+          </div>
+        </div>
+
+        <div class="section03__bg-img03__wrapper">
+          <div class="line">
+            <span></span>
+          </div>
+          <figure class="bg-img-right js-fade-left02 mb-100">
+            <img src="{{ 'bg-img03.png' | asset_url }}" alt="">
+          </figure>
+        </div>
+
+      <!-- <div class="section03__bg-img03"></div> -->
+      </section>
+
+      <section class="footer">
+        <button class="common-button mb-12">Check the Item</button>
+        <button class="common-button--bg-black">Catalog</button>
+        <button class="common-button--reservation">
+          Reservation<span>ショールーム予約</span>
+        </button>
+      </section>
+    </div>
+  </div>
+</div>
+
+
+{% comment %} <script src="https://player.vimeo.com/api/player.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="script.js"></script> {% endcomment %}
