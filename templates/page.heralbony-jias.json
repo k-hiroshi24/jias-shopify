@@ -1,12 +1,24 @@
 {
   "sections": {
     "main": {
-      "type": "page",
+      "type": "page-heralbony-jias",
       "settings": {
+      }
+    },
+    "16612280678fe0b038": {
+      "type": "dynamic-featured-collection",
+      "settings": {
+        "title": "商品紹介",
+        "layout": "grid",
+        "collection": "jias-heralbony",
+        "product_count": 25,
+        "cta_label": "",
+        "cta_button_style": "primary"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "16612280678fe0b038"
   ]
 }
