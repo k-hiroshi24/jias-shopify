@@ -11,6 +11,7 @@
       <link rel="preconnect" href="https://cdn.shopifycloud.com">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://use.typekit.net/urj3jgu.css" />
   
       <title>
         {{- page_title -}}
@@ -161,6 +162,38 @@
     <meta name="google-site-verification" content="TernNkv6iJkKVr5kSX5VlaUNQiS0zPgkdT_nNDvurzc" />
     {{ 'custom-fields.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'custom-fields-widgets.js' | asset_url }}" defer="defer"></script>
+   <!--fot-tsukumin-pr6nの読み込み -->
+   <script>
+    (function (d) {
+      var config = {
+          kitId: "iey8hqy",
+          scriptTimeout: 3000,
+          async: true,
+        },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className =
+            h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || (a && a != "complete" && a != "loaded")) return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config);
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s);
+    })(document);
+  </script>
   </head>
   
     <body class="template-{{ template.name }} {% if request.page_type == 'page' %} page--{{ handle | handle }}{% endif %}" data-instant-allow-query-string {% if settings.reduce_animations %}data-reduce-animations{% endif %}>
@@ -527,6 +560,10 @@
   
   {% include 'swymSnippet' %}
    {% include 'wish.liquid' %}
+   <script src="https://player.vimeo.com/api/player.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+   <script src="script.js"></script>
   </body>
   </html>
   
