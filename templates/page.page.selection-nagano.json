@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-selection-nagano",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,9 @@
+{% if collection.metafields["my_fields"]["_kana"] != blank %}
+  <div class="custom-field custom-field__-kana custom-field__type--single-line-text-field">
+    <h3 class="custom-field--title">コレクションカナ</h3>
+    <div class="custom-field--value">
+      {{ collection.metafields["my_fields"]["_kana"] }}
+
+    </div>
+  </div>
+{% endif %}

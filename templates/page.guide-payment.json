@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-guide-payment",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

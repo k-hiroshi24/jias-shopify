@@ -1,0 +1,137 @@
+{% assign default_province = 'Tōkyō' %}
+{% assign default_zip = '' %}
+
+{% if section.settings.shipping_calc_default_country != '' %}
+  {% assign default_country = section.settings.shipping_calc_default_country | escape %}
+{% else %}
+  {% assign default_country = '' %}
+{% endif %}
+
+{% if shop.customer_accounts_enabled and customer %}
+  {% if customer.default_address.country != '' %}
+    {% if customer.default_address.country == '日本' %}
+      {% assign default_country = 'Japan' %}
+    {% else %}
+      {% assign default_country = customer.default_address.country %}
+    {% endif %}
+  {% endif %}
+
+  {% if customer.default_address.province != '' %}
+    {% if customer.default_address.province == '愛知県' %}{% assign default_province = 'Aichi' %}
+    {% elsif customer.default_address.province == '秋田県' %}{% assign default_province = 'Akita' %}
+    {% elsif customer.default_address.province == '青森県' %}{% assign default_province = 'Aomori' %}
+    {% elsif customer.default_address.province == '千葉県' %}{% assign default_province = 'Chiba' %}
+    {% elsif customer.default_address.province == '愛媛県' %}{% assign default_province = 'Ehime' %}
+    {% elsif customer.default_address.province == '福井県' %}{% assign default_province = 'Fukui' %}
+    {% elsif customer.default_address.province == '福岡県' %}{% assign default_province = 'Fukuoka' %}
+    {% elsif customer.default_address.province == '福島県' %}{% assign default_province = 'Fukushima' %}
+    {% elsif customer.default_address.province == '岐阜県' %}{% assign default_province = 'Gifu' %}
+    {% elsif customer.default_address.province == '群馬県' %}{% assign default_province = 'Gunma' %}
+    {% elsif customer.default_address.province == '広島県' %}{% assign default_province = 'Hiroshima' %}
+    {% elsif customer.default_address.province == '北海道' %}{% assign default_province = 'Hokkaidō' %}
+    {% elsif customer.default_address.province == '兵庫県' %}{% assign default_province = 'Hyōgo' %}
+    {% elsif customer.default_address.province == '茨城県' %}{% assign default_province = 'Ibaraki' %}
+    {% elsif customer.default_address.province == '石川県' %}{% assign default_province = 'Ishikawa' %}
+    {% elsif customer.default_address.province == '岩手県' %}{% assign default_province = 'Iwate' %}
+    {% elsif customer.default_address.province == '香川県' %}{% assign default_province = 'Kagawa' %}
+    {% elsif customer.default_address.province == '山梨県' %}{% assign default_province = 'Yamanashi' %}
+    {% elsif customer.default_address.province == '山口県' %}{% assign default_province = 'Yamaguchi' %}
+    {% elsif customer.default_address.province == '高知県' %}{% assign default_province = 'Kōchi' %}
+    {% elsif customer.default_address.province == '熊本県' %}{% assign default_province = 'Kumamoto' %}
+    {% elsif customer.default_address.province == '京都府' %}{% assign default_province = 'Kyōto' %}
+    {% elsif customer.default_address.province == '三重県' %}{% assign default_province = 'Mie' %}
+    {% elsif customer.default_address.province == '山形県' %}{% assign default_province = 'Yamagata' %}
+    {% elsif customer.default_address.province == '宮崎県' %}{% assign default_province = 'Miyazaki' %}
+    {% elsif customer.default_address.province == '長野県' %}{% assign default_province = 'Nagano' %}
+    {% elsif customer.default_address.province == '長崎県' %}{% assign default_province = 'Nagasaki' %}
+    {% elsif customer.default_address.province == '奈良県' %}{% assign default_province = 'Nara' %}
+    {% elsif customer.default_address.province == '新潟県' %}{% assign default_province = 'Niigata' %}
+    {% elsif customer.default_address.province == '大分県' %}{% assign default_province = 'Ōita' %}
+    {% elsif customer.default_address.province == '岡山県' %}{% assign default_province = 'Okayama' %}
+    {% elsif customer.default_address.province == '沖縄県' %}{% assign default_province = 'Okinawa' %}
+    {% elsif customer.default_address.province == '大阪府' %}{% assign default_province = 'Ōsaka' %}
+    {% elsif customer.default_address.province == '佐賀県' %}{% assign default_province = 'Saga' %}
+    {% elsif customer.default_address.province == '埼玉県' %}{% assign default_province = 'Saitama' %}
+    {% elsif customer.default_address.province == '滋賀県' %}{% assign default_province = 'Shiga' %}
+    {% elsif customer.default_address.province == '島根県' %}{% assign default_province = 'Shimane' %}
+    {% elsif customer.default_address.province == '静岡県' %}{% assign default_province = 'Shizuoka' %}
+    {% elsif customer.default_address.province == '栃木県' %}{% assign default_province = 'Tochigi' %}
+    {% elsif customer.default_address.province == '徳島県' %}{% assign default_province = 'Tokushima' %}
+    {% elsif customer.default_address.province == '鳥取県' %}{% assign default_province = 'Tottori' %}
+    {% elsif customer.default_address.province == '富山県' %}{% assign default_province = 'Toyama' %}
+    {% elsif customer.default_address.province == '東京都' %}{% assign default_province = 'Tōkyō' %}
+    {% elsif customer.default_address.province == '宮城県' %}{% assign default_province = 'Miyagi' %}
+    {% elsif customer.default_address.province == '和歌山県' %}{% assign default_province = 'Wakayama' %}
+    {% elsif customer.default_address.province == '神奈川県' %}{% assign default_province = 'Kanagawa' %}
+    {% elsif customer.default_address.province == '鹿児島県' %}{% assign default_province = 'Kagoshima' %}{% endif %}
+  {% endif %}
+
+  {% if customer.default_address.zip != '' %}
+    {% assign default_zip = customer.default_address.zip %}
+  {% endif %}
+{% endif %}
+
+{% if cart.requires_shipping %}
+  <div class="cart-shippingcalc--heading">
+    <button
+      class="cart-shipping-toggle button-secondary"
+      type="button"
+      data-cartshipping-toggle="{{ 'cart.shipping.hide_shipping_calculator' | t | escape }}">
+      {{ 'cart.shipping.calculate_shipping' | t }}
+    </button>
+    <p>※お住まいの地域と郵便番号を入力することで、カート内商品の配送料（合計）を事前に確認することができます。<br />「現時点では送料を計算できません。」と表示される場合は、次のご注文手続き画面にて配送料を確認できますので「ご注文手続き」ボタンにて次の画面にお進みください。</p>
+  </div>
+
+  <div class="cart-shippingcalc--container" id="shipping-calculator" data-cartshipping>
+    <div class="cart-shippingcalc-form">
+      <div class="cart-shippingcalc--inner">
+
+        <div class="form-field">
+          <div class="form-field-select-wrapper">
+            <select
+              class="form-field-input form-field-select"
+              name="address[country]"
+              id="address_country"
+              data-default="{{ default_country }}">{{ country_option_tags }}</select>
+            <label class="form-field-title" for="address_country">
+              {{ 'cart.shipping.country' | t }}
+            </label>
+            {% render 'icon-chevron-down-small' %}
+          </div>
+        </div>
+
+        <div class="form-field" id="address_province_container" style="display:none;">
+          <div class="form-field-select-wrapper">
+            <select class="form-field-input form-field-select form-field-filled" name="address[province]" id="address_province" data-default="{{ default_province }}"><option value=""></option></select>
+            <label class="form-field-title" for="address_province">都道府県</label>
+            {% render 'icon-chevron-down-small' %}
+          </div>
+        </div>
+
+        <div class="form-field">
+          <input
+            class="form-field-input form-field-text"
+            type="text"
+            id="address_zip"
+            name="address[zip]"
+            value="{{ default_zip }}">
+          <label class="form-field-title" for="address_zip">郵便番号</label>
+        </div>
+
+      </div>
+
+      <button class="button-primary" type="button" data-cartshipping-submit>
+        {{ 'cart.shipping.calculate_shipping' | t }}
+      </button>
+    </div>
+
+    <div class="cart-shippingcalc-response" aria-live="polite" data-cartshipping-response>
+      <div class="cart-shippingcalc-message" data-cartshipping-message></div>
+      <ul class="cart-shippingcalc-rates" data-cartshipping-rates></ul>
+    </div>
+  </div>
+{% else %}
+  <p class="cart-shippingcalc-nonene">
+    {{ 'cart.shipping.no_shipping_required' | t }}
+  </p>
+{% endif %}

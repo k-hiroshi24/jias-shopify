@@ -1,0 +1,166 @@
+<script
+  type="application/json"
+  data-section-id="{{ section.id }}"
+  data-section-type="dynamic-menu-list"
+  data-section-data>
+  {
+    "context": {
+      "see_more": {{ 'general.general.see_more' | t | json }},
+      "see_less": {{ 'general.general.see_less' | t | json }}
+    }
+  }
+</script>
+
+<script type="application/pxs-animation-mapping+json">
+  {
+    "blocks": [".menulist-item"],
+    "elements": [
+      ".menulist-item__image"
+    ]
+  }
+</script>
+
+<section class="menulist-container menulist-custom-container">
+  {% if section.settings.title != blank %}
+    <h2 class="home-section--title">
+      {{ section.settings.title | escape }}
+    </h2>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="home-section--content menulist-custom-inner menulist-custom--blocks-count-{{ section.blocks.size }}" >
+      {% for block in section.blocks %}
+        {% assign menu = block.settings.menu %}
+        {% assign onboard = false %}
+        {% assign image = false %}
+
+        {% if menu == '' or linklists[menu].links.size == 0 %}
+          {% assign onboard = true %}
+          {% assign menu_title = 'onboarding.menu_list.title' | t %}
+        {% else %}
+          {% assign menu_title = linklists[menu].title %}
+        {% endif %}
+
+        {% if block.settings.image %}
+          {% assign image = block.settings.image %}
+        {% elsif menu %}
+          {% for link in linklists[menu].links %}
+            {% if link.object.image %}
+              {% assign image = link.object.image %}
+              {% break %}
+            {% elsif link.object.featured_image %}
+              {% assign image = link.object.featured_image %}
+            {% elsif collections[link.object.handle].products.first.featured_media.preview_image %}
+              {% assign image = collections[link.object.handle].products.first.featured_media.preview_image %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        <article class="menulist-custom-item menulist-custom-item-{{ forloop.index }}" {{ block.shopify_attributes }}>
+          <div class="menulist-custom-item-inner">
+
+            <div class="menulist-custom-item__content">
+              <ul class="menulist-custom-menu menulist-custom-menu--initial" data-accordion-content>
+                {% for menu_item in menu.links %}
+                  {% if linklists[menu_item.handle] %}
+                    <li class="navmenu-item">
+                      <a href="{{ menu_item.url }}" class="navmenu-link navmenu-link-parent">
+                        {{ menu_item.title }}
+                      </a>
+                      <ul>
+                      {% for sub_item in linklists[menu_item.handle].links %}
+                        <li class="menulist-custom-menu-item">
+                          <a href="{{ sub_item.url }}" class="
+                            menulist-custom-menu-link
+                            {% if sub_item.type == 'collection_link' and sub_item.object.metafields.my_fields.menu_thumb != blank %}menulist-custom-menu-link-col{% endif %}
+                            ">
+                            {%- if sub_item.type == 'collection_link' -%}
+                              {%- if sub_item.object.metafields.my_fields.menu_thumb != blank -%}
+                                {% assign menu_item_image = sub_item.object.metafields.my_fields.menu_thumb %}
+                                <div class="menulist-custom-menu-item__image-wrapper">
+                                  {%
+                                    render 'rimg',
+                                    img: menu_item_image,
+                                    class: 'menulist-custom-menu-item__image',
+                                    size: '600x',
+                                    alt: sub_item.title,
+                                  %}
+                                </div>
+                              {%- endif -%}
+                            {%- endif -%}
+                            {{ sub_item.title }}
+                          </a>
+                        </li>
+                      {% endfor %}
+                      </ul>
+                    </li>
+                  {% else %}
+                    <li class="menulist-custom-menu-item">
+                      <a href="{{ menu_item.url }}" class="menulist-custom-menu-link">
+                        {{ menu_item.title }}
+                      </a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Menu list custom",
+  "class": "menulist--section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Menu list"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Menu",
+      "settings": [
+        {
+          "id": "menu",
+          "type": "link_list",
+          "label": "Menu"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Menu list custom",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "menu"
+        },
+        {
+          "type": "menu"
+        },
+        {
+          "type": "menu"
+        },
+        {
+          "type": "menu"
+        }
+      ]
+    }
+  ],
+  "templates": [
+    "index"
+  ]
+}
+
+{% endschema %}

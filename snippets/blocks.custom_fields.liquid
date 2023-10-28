@@ -1,0 +1,66 @@
+<div class="custom-fields-section v2">
+  
+    {% if resource_type == "pages" %}
+    <div class="custom-fields-section__pages">
+      {% for block in blocks %}
+      {% if block.type contains "cf_" %}
+      <div {{ block.shopify_attributes }} class="custom-fields-section__item
+                  custom-fields-section__item--{{ block.type }}
+                  custom-fields-section__item--{{ block.type }}--{{ block.settings.key }}
+                  {% if block.settings.cols != blank %}{{ "cf-width-" | append: block.settings.cols | append: "-of-12" }}{% else %}cf-width-12-of-12{% endif %}">
+        {% case block.settings.key %}
+                  {% when "my_fields.parent_collection" %}
+            {% render "my_fields.pages.parent_collection", block:block %}
+                  {% when "my_fields.parent_page" %}
+            {% render "my_fields.pages.parent_page", block:block %}
+        
+        {% endcase %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  
+    {% if resource_type == "collections" %}
+    <div class="custom-fields-section__collections">
+      {% for block in blocks %}
+      {% if block.type contains "cf_" %}
+      <div {{ block.shopify_attributes }} class="custom-fields-section__item
+                  custom-fields-section__item--{{ block.type }}
+                  custom-fields-section__item--{{ block.type }}--{{ block.settings.key }}
+                  {% if block.settings.cols != blank %}{{ "cf-width-" | append: block.settings.cols | append: "-of-12" }}{% else %}cf-width-12-of-12{% endif %}">
+        {% case block.settings.key %}
+                  {% when "my_fields.parent_page" %}
+            {% render "my_fields.collections.parent_page", block:block %}
+                  {% when "my_fields.parent_collection" %}
+            {% render "my_fields.collections.parent_collection", block:block %}
+                  {% when "my_fields._kana" %}
+            {% render "my_fields.collections._kana", block:block %}
+        
+        {% endcase %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  
+    {% if resource_type == "products" %}
+    <div class="custom-fields-section__products">
+      {% for block in blocks %}
+      {% if block.type contains "cf_" %}
+      <div {{ block.shopify_attributes }} class="custom-fields-section__item
+                  custom-fields-section__item--{{ block.type }}
+                  custom-fields-section__item--{{ block.type }}--{{ block.settings.key }}
+                  {% if block.settings.cols != blank %}{{ "cf-width-" | append: block.settings.cols | append: "-of-12" }}{% else %}cf-width-12-of-12{% endif %}">
+        {% case block.settings.key %}
+                  {% when "custom_fields.product_tab_field" %}
+            {% render "custom_fields.products.product_tab_field", block:block %}
+        
+        {% endcase %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  
+</div>

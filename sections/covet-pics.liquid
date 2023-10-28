@@ -1,0 +1,73 @@
+<div data-section-id="{{ section.id }}" data-section-type="covet-pics-feed">
+  {%- assign sectionHeading = section.settings.title -%}
+  {%- assign gallery_code = section.settings.gallery-code -%}
+  <section class="covet-pics-container">
+    {% if sectionHeading != blank %}
+      <h2 class="home-section--title">{{ sectionHeading }}</h2>
+    {% endif %}
+    <div class="covet-pics-wrap">
+      {{ gallery_code }}
+    </div>
+  </section>
+</div>
+<script type="text/javascript">
+// triggers when gallery is ready
+document.addEventListener('galleryReady:covetPics', function(e) {
+  // prepare CSS styles to inject
+  const stylesPopup = document.createElement( 'style' )
+  stylesPopup.innerHTML = `
+    .btn-load-more {
+      border: 1px solid #0c0c0c;
+      padding: 0.75rem 1.125rem;
+      color: #fff;
+      font-family: var(--font_button);
+      font-size: var(--font-size-button-medium);
+      letter-spacing: .05em;
+      text-align: center;
+      background-color: #0c0c0c;
+      transition: width 125ms cubic-bezier(.4,0,.2,1),height 125ms cubic-bezier(.4,0,.2,1),border-color 125ms cubic-bezier(.4,0,.2,1),color 125ms cubic-bezier(.4,0,.2,1),background-color 125ms cubic-bezier(.4,0,.2,1),box-shadow 125ms cubic-bezier(.4,0,.2,1);
+    }
+    .btn-load-more:hover,
+    .btn-load-more:active,
+    .btn-load-more:focus {
+      background: #b8b16d;
+      border: 1px solid #b8b16d;
+      opacity: 1;
+    }
+    covet-pics-gallery-item .bg {
+      font-size: 12px;
+      letter-spacing: 0;
+      line-height: 1.3;
+    }
+  `
+  // get Covet gallery elements where you want to inject CSS (for eg. covet-pics-widget, covet-pics-popup, covet-pics-upload)
+  const popup = document.querySelector("covet-pics-widget");
+
+  // now inject CSS code into shadow DOM
+  popup.shadowRoot.appendChild(stylesPopup);
+});
+</script>
+{% schema %}
+{
+  "name": "Covet.pics Gallery",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Instagram feed"
+    },
+    {
+      "type": "textarea",
+      "id": "gallery-code",
+      "label": "Gallery Embed Code"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Image",
+      "name": "Covet.pics gallery"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,20 @@
+{% render 'breadcrumbs' %}
+<article class="site-page" data-template-page>
+
+  <header class="page-masthead">
+    <h1 class="page-title">
+      {{ page.title }}
+    </h1>
+  </header>
+
+  {% if page.content != blank %}
+    <div class="newsletter-page-content page-content rte">
+      {{ page.content }}
+
+      {% render 'newsletter' %}
+
+    </div>
+  {% endif %}
+
+
+</article>

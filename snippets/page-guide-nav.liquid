@@ -1,0 +1,290 @@
+<ul class="guideLists nodisc">
+
+  {% comment %}↓↓ 会員情報について ↓↓{% endcomment %}
+  <li class="guideLists-item {% if template == 'page.guide-member' %}guideLists-item_current{% endif %}">
+    <a class="guideLists-item-link" href="{{ pages["guide-member"].url }}">
+      <span class="guideIcon guideIcon_member">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.5 59.5" xml:space="preserve"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3.333"><path d="M49.8 52.3v-5c0-5.5-4.5-10-10-10h-20c-5.5 0-10 4.5-10 10v5"/><circle cx="29.8" cy="17.3" r="10"/></g></svg>
+      </span>
+      <span class="guideLists-item-link-text">{{ pages["guide-member"].title }}</span>
+    </a>
+    {% comment %}↓↓ ご利用ガイドページ項目表示用 ↓↓{% endcomment %}
+      {% if template == 'page.guide' %}
+        <ul class="guideLists-item-childLists">
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-member"].url }}#member01">会員情報について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-member"].url }}#member02">会員登録（アカウント登録）の方法</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-member"].url }}#member03">マイアカウントページについて</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-member"].url }}#member04">ご登録内容の確認・変更</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-member"].url }}#member05">パスワードを忘れてしまった。</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-member"].url }}#member06">ご登録時のメールアドレスを忘れてしまった</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-member"].url }}#member07">二重登録をしてしまった</a>
+          </li>
+        </ul>
+      {% endif %}
+    {% comment %}↑↑ ご利用ガイドページ項目表示用 ↑↑{% endcomment %}
+  </li>
+  {% comment %}↑↑ 会員情報について ↑↑{% endcomment %}
+
+
+  {% comment %}↓↓ 商品について ↓↓{% endcomment %}
+  <li class="guideLists-item {% if template == 'page.guide-product' %}guideLists-item_current{% endif %}">
+    <a class="guideLists-item-link" href="{{ pages["guide-product"].url }}">
+      <span class="guideIcon guideIcon_product">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.5 59.5" xml:space="preserve"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3.333"><path d="M41 23.2 18.8 10.5M52.3 39.7v-20c0-1.8-1-3.4-2.5-4.3l-17.5-10c-1.5-.9-3.5-.9-5 0l-17.5 10c-1.5.9-2.5 2.5-2.5 4.3v20c0 1.8 1 3.4 2.5 4.3l17.5 10c1.5.9 3.5.9 5 0l17.5-10c1.5-.9 2.5-2.6 2.5-4.3z"/><path d="m8 17.2 21.9 12.5 21.7-12.5M29.8 54.7v-25"/></g></svg>
+    </span>
+    <span class="guideLists-item-link-text">{{ pages["guide-product"].title }}</span>
+    </a>
+    {% comment %}↓↓ ご利用ガイドページ項目表示用 ↓↓{% endcomment %}
+      {% if template == 'page.guide' %}
+        <ul class="guideLists-item-childLists">
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-product"].url }}#product01">商品の仕様について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-product"].url }}#product02">商品のサイズについて</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-product"].url }}#product03">商品の価格について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-product"].url }}#product04">天井照明の取り付けについて</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-product"].url }}#product07">カーテンの各種マークについて</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-product"].url }}#product05">各種ラベルのご説明</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-product"].url }}#product06">保証・修理について</a>
+          </li>
+        </ul>
+      {% endif %}
+    {% comment %}↑↑ ご利用ガイドページ項目表示用 ↑↑{% endcomment %}
+  </li>
+  {% comment %}↑↑ 商品について ↑↑{% endcomment %}
+
+
+  {% comment %}↓↓ 注文について ↓↓{% endcomment %}
+  <li class="guideLists-item {% if template == 'page.guide-order' %}guideLists-item_current{% endif %}">
+    <a class="guideLists-item-link" href="{{ pages["guide-order"].url }}">
+      <span class="guideIcon guideIcon_order">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.5 59.5" xml:space="preserve"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3.333"><circle cx="22.3" cy="53.5" r="2.5"/><circle cx="49.8" cy="53.5" r="2.5"/><path d="M2.3 3.5h10L19 37c.5 2.4 2.6 4.1 5 4h24.3c2.4 0 4.5-1.6 5-4l4-21H14.8"/></g></svg>
+    </span>
+    <span class="guideLists-item-link-text">{{ pages["guide-order"].title }}</span>
+    </a>
+    {% comment %}↓↓ ご利用ガイドページ項目表示用 ↓↓{% endcomment %}
+      {% if template == 'page.guide' %}
+        <ul class="guideLists-item-childLists">
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-order"].url }}#order01">ご注文の流れについて</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-order"].url }}#order02">ご注文状況について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-order"].url }}#order03">ご注文後にメールが届かない場合</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-order"].url }}#order04">法人のお客様へ</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-order"].url }}#order05">注文ができたか確認したい</a>
+          </li>
+        </ul>
+      {% endif %}
+    {% comment %}↑↑ ご利用ガイドページ項目表示用 ↑↑{% endcomment %}
+  </li>
+  {% comment %}↑↑ 注文について ↑↑{% endcomment %}
+
+
+  {% comment %}↓↓ お支払いについて ↓↓{% endcomment %}
+  <li class="guideLists-item {% if template == 'page.guide-payment' %}guideLists-item_current{% endif %}">
+    <a class="guideLists-item-link" href="{{ pages["guide-payment"].url }}">
+      <span class="guideIcon guideIcon_payment">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.5 59.5" xml:space="preserve"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3.333"><path d="M7.3 9.8h45c2.8 0 5 2.2 5 5v30c0 2.8-2.2 5-5 5h-45c-2.8 0-5-2.2-5-5v-30c0-2.8 2.2-5 5-5zM2.3 24.8h55"/></g></svg>
+    </span>
+    <span class="guideLists-item-link-text">{{ pages["guide-payment"].title }}</span>
+    </a>
+    {% comment %}↓↓ ご利用ガイドページ項目表示用 ↓↓{% endcomment %}
+      {% if template == 'page.guide' %}
+      <ul class="guideLists-item-childLists">
+        <li class="guideLists-item-childLists-item">
+          <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-payment"].url }}#payment01">お支払方法について</a>
+        </li>
+        <li class="guideLists-item-childLists-item">
+          <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-payment"].url }}#payment02">クレジットカード決済</a>
+        </li>
+        <li class="guideLists-item-childLists-item">
+          <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-payment"].url }}#payment03">領収書について</a>
+        </li>
+      </ul>
+      {% endif %}
+    {% comment %}↑↑ ご利用ガイドページ項目表示用 ↑↑{% endcomment %}
+  </li>
+  {% comment %}↑↑ お支払いについて ↑↑{% endcomment %}
+
+
+  {% comment %}↓↓ 配送について ↓↓{% endcomment %}
+  <li class="guideLists-item {% if template == 'page.guide-delivery' %}guideLists-item_current{% endif %}">
+    <a class="guideLists-item-link" href="{{ pages["guide-delivery"].url }}">
+      <span class="guideIcon guideIcon_delivery">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.5 59.5" xml:space="preserve"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3.333"><path d="M2.3 7.3h37.5v32.5H2.3zM39.8 19.8h10l7.5 7.5v12.5H39.8z"/><circle cx="13.5" cy="46" r="6.2"/><circle cx="46" cy="46" r="6.2"/></g></svg>
+    </span>
+    <span class="guideLists-item-link-text">{{ pages["guide-delivery"].title }}</span>
+    </a>
+    {% comment %}↓↓ ご利用ガイドページ項目表示用 ↓↓{% endcomment %}
+      {% if template == 'page.guide' %}
+        <ul class="guideLists-item-childLists">
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-delivery"].url }}#delivery01">配送方法について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-delivery"].url }}#delivery02">送料について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-delivery"].url }}#delivery03">お届け日の目安（標準納期）・お届け予定日について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-delivery"].url }}#delivery04">お届け曜日・日時のご指定について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-delivery"].url }}#delivery05">開梱設置配送について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-delivery"].url }}#delivery06">開梱設置配送の搬入について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-delivery"].url }}#delivery07">搬入経路のご確認のお願い</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-delivery"].url }}#delivery08">お手持ちの家具（不用品）の引き取りについて</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-delivery"].url }}#delivery09">配送先の変更について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-delivery"].url }}#delivery10">再配達について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-delivery"].url }}#delivery11">商品が届かない場合</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-delivery"].url }}#delivery12">配送先の複数設定について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-delivery"].url }}#delivery13">海外への発送について</a>
+          </li>
+        </ul>
+      {% endif %}
+    {% comment %}↑↑ ご利用ガイドページ項目表示用 ↑↑{% endcomment %}
+  </li>
+  {% comment %}↑↑ 配送について ↑↑{% endcomment %}
+
+  {% comment %}↓↓ ギフトラッピングについて ↓↓{% endcomment %}
+  <li class="guideLists-item {% if template == 'page.guide-giftwrapping' %}guideLists-item_current{% endif %}">
+    <a class="guideLists-item-link" href="{{ pages["guide-giftwrapping"].url }}">
+      <span class="guideIcon guideIcon_gw">
+      <img src="https://cdn.shopify.com/s/files/1/0587/8438/3170/files/noun-gifts-917106.svg?v=1692678565" />
+    </span>
+    <span class="guideLists-item-link-text">{{ pages["guide-giftwrapping"].title }}</span>
+    </a>
+    {% comment %}↓↓ ご利用ガイドページ項目表示用 ↓↓{% endcomment %}
+      {% if template == 'page.guide' %}
+        <ul class="guideLists-item-childLists">
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-giftwrapping"].url }}#gw01">ギフトラッピングについて</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-giftwrapping"].url }}#gw02">ギフトラッピングの注文方法について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-giftwrapping"].url }}#gw03">ギフトラッピングの注意点</a>
+          </li>
+        </ul>
+      {% endif %}
+    {% comment %}↑↑ ご利用ガイドページ項目表示用 ↑↑{% endcomment %}
+  </li>
+  {% comment %}↑↑ ギフトラッピングについて ↑↑{% endcomment %}
+
+  {% comment %}↓↓ eギフトでのご注文について ↓↓{% endcomment %}
+  <li class="guideLists-item {% if template == 'page.guide-egift' %}guideLists-item_current{% endif %}">
+    <a class="guideLists-item-link" href="{{ pages["guide-egift"].url }}">
+      <span class="guideIcon guideIcon_egift">
+        <img src="https://cdn.shopify.com/s/files/1/0587/8438/3170/files/mail.svg?v=1692681731" />
+    </span>
+    <span class="guideLists-item-link-text">{{ pages["guide-egift"].title }}</span>
+    </a>
+    {% comment %}↓↓ ご利用ガイドページ項目表示用 ↓↓{% endcomment %}
+      {% if template == 'page.guide' %}
+        <ul class="guideLists-item-childLists">
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-egift"].url }}#egift01">eギフトとは？</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-egift"].url }}#egift02">eギフトの贈り方</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-egift"].url }}#egift03">eギフトの受け取り方</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-egift"].url }}#egift04">eギフトの注意事項</a>
+          </li>
+        </ul>
+      {% endif %}
+    {% comment %}↑↑ ご利用ガイドページ項目表示用 ↑↑{% endcomment %}
+  </li>
+  {% comment %}↑↑ eギフトでのご注文について ↑↑{% endcomment %}
+
+  {% comment %}↓↓ 返品・キャンセルについて ↓↓{% endcomment %}
+  <li class="guideLists-item {% if template == 'page.guide-cancel' %}guideLists-item_current{% endif %}">
+    <a class="guideLists-item-link" href="{{ pages["guide-cancel"].url }}">
+      <span class="guideIcon guideIcon_cancel">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.5 59.5" xml:space="preserve"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10"><path d="m38.2 2.3 11.7 11.1-11.7 11.1M9.7 13.4H49"/><g><path d="M21.1 57.2 9.7 46.1 21.1 35M49.9 46.1H9.7"/></g></g></svg>
+    </span>
+    <span class="guideLists-item-link-text">{{ pages["guide-cancel"].title }}</span>
+    </a>
+    {% comment %}↓↓ ご利用ガイドページ項目表示用 ↓↓{% endcomment %}
+      {% if template == 'page.guide' %}
+        <ul class="guideLists-item-childLists">
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-cancel"].url }}#cancel01">返品・交換・キャンセルについて</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-cancel"].url }}#cancel02">商品に不良（破損・汚損・部品不足）があった場合</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-cancel"].url }}#cancel03">商品の部品等に不足があった場合</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-cancel"].url }}#cancel04">ご注文と異なる商品が届いた場合</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-cancel"].url }}#cancel05">ご返金方法について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-cancel"].url }}#cancel06">お客様のご都合による返品について</a>
+          </li>
+          <li class="guideLists-item-childLists-item">
+            <a class="guideLists-item-childLists-item-link" href="{{ pages["guide-cancel"].url }}#cancel07">クーリングオフについて</a>
+          </li>
+        </ul>
+      {% endif %}
+    {% comment %}↑↑ ご利用ガイドページ項目表示用 ↑↑{% endcomment %}
+  </li>
+  {% comment %}↑↑ 返品・キャンセルについて ↑↑{% endcomment %}
+
+</ul>

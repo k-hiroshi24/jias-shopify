@@ -1,0 +1,82 @@
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "settings": {
+      }
+    },
+    "1650538930783df407": {
+      "type": "dynamic-collection-list",
+      "blocks": {
+        "1650538930c15ef1dd-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "natural",
+            "image": "shopify:\/\/shop_images\/taste_natural.jpg",
+            "title": "",
+            "description": ""
+          }
+        },
+        "1650538930c15ef1dd-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "scandinavian",
+            "image": "shopify:\/\/shop_images\/taste_scandinavian.jpg",
+            "title": "",
+            "description": ""
+          }
+        },
+        "1650538930c15ef1dd-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "modern",
+            "image": "shopify:\/\/shop_images\/taste_modern.jpg",
+            "title": "",
+            "description": ""
+          }
+        },
+        "1650538930c15ef1dd-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "vintage",
+            "image": "shopify:\/\/shop_images\/taste_vintage.jpg",
+            "title": "",
+            "description": ""
+          }
+        },
+        "1650538930c15ef1dd-4": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "japanese-modern",
+            "image": "shopify:\/\/shop_images\/taste_japanese-modern.jpg",
+            "title": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "1650538930c15ef1dd-0",
+        "1650538930c15ef1dd-1",
+        "1650538930c15ef1dd-2",
+        "1650538930c15ef1dd-3",
+        "1650538930c15ef1dd-4"
+      ],
+      "settings": {
+        "show_only_available": true,
+        "title": "",
+        "thumbnail_columns_desktop": 2,
+        "thumbnail_columns_mobile": 2,
+        "image-crop": "original",
+        "text_alignment": "text-alignment-left",
+        "cta_label": "",
+        "cta_link": "",
+        "cta_button_style": "primary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1650538930783df407"
+  ]
+}

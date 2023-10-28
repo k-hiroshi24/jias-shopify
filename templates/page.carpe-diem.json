@@ -1,0 +1,24 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-carpe-diem",
+      "settings": {
+      }
+    },
+    "16612280678fe0b038": {
+      "type": "dynamic-featured-collection",
+      "settings": {
+        "title": "商品紹介",
+        "layout": "grid",
+        "collection": "carpe-diem",
+        "product_count": 25,
+        "cta_label": "",
+        "cta_button_style": "primary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16612280678fe0b038"
+  ]
+}

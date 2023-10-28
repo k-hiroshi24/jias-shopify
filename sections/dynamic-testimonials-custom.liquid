@@ -1,0 +1,111 @@
+<script
+  type="application/json"
+  data-section-id="{{ section.id }}"
+  data-section-type="dynamic-testimonials">
+</script>
+
+<script type="application/pxs-animation-mapping+json">
+  {
+    "blocks": [".testimonial"],
+    "elements": [
+      ".testimonial__image-container"
+    ]
+  }
+</script>
+
+<section class="testimonials-section testimonials-custom-section">
+  {% if section.settings.title != blank %}
+    <h2 class="home-section--title">
+      {{ section.settings.title | escape }}
+    </h2>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="testimonials home-section--content">
+      {% for block in section.blocks %}
+        <div class="testimonial" {{ block.shopify_attributes }}>
+          {%- if block.settings.url != blank -%}
+            <a class="testimonial__content" href="{{ block.settings.url}}">
+              {%- else -%}
+            <div class="testimonial__content">
+          {%- endif -%}
+          <div class="testimonial__image-container">
+            <img  class="testimonial__image" src="{{ block.settings.image | img_url: 'master' }}" alt="{{ alt | escape }}">
+          </div>
+
+          {% if block.settings.text != blank %}
+            <blockquote class="testimonial__text">
+              {{ block.settings.text }}
+            </blockquote>
+          {% endif %}
+
+        </div>
+        {%- if block.settings.url != blank -%}
+          </a>
+        {%- else -%}
+          </div>
+        {%- endif -%}
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Custom Slide",
+  "class": "testimonials--section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Custom Slide"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "write your text."
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Slide",
+      "category": "Custom Slide",
+      "blocks": [
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        }
+      ]
+    }
+  ],
+  "templates": [
+    "index"
+  ]
+}
+
+{% endschema %}

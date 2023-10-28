@@ -1,0 +1,54 @@
+{% render 'breadcrumbs' %}
+<article class="site-page" data-template-page>
+  <header class="page-masthead">
+    <h1 class="page-title">
+      {{ page.title }}
+    </h1>
+  </header>
+
+  <div class="page-content rte">
+    <div class="guideContainer">
+      <aside class="guideSideNav">
+        {% render 'page-guide-nav' %}
+      </aside>
+      <main class="guideMain">
+
+        <section id="payment01" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">お支払方法について</h2>
+          <div class="guideBox-body js_accordion_body">
+            {% if section.settings.payment_icons and shop.enabled_payment_types.size > 0 %}
+              <ul class="payment-icons">
+                {% for type in shop.enabled_payment_types %}
+                  <li class="payment-icons-item">
+                    {{ type | payment_type_svg_tag }}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            <p>お支払方法は、クレジットカード（VISA、Mastercard、JCB、American Express）、Amazon Pay による決済、または Shopify ペイメント(Shop Pay、Apple Pay、Google Pay)による決済がご利用いただけます。</p>
+            <ul>
+              <li>ご注文確定後は決済方法の変更ができません。</li>
+            </ul>
+            <p>お支払いいただく総額は以下のとおりです。<br />支払総額 = 商品代金合計（オプション代含む）+ 消費税 + 送料</p>
+          </div>
+        </section>
+
+        <section id="payment02" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">クレジットカード決済</h2>
+          <div class="guideBox-body js_accordion_body">
+            <p>対応カード<br />VISA、Mastercard、JCB、American Express がご利用いただけます。</p>
+          </div>
+        </section>
+
+        <section id="payment03" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">領収書について</h2>
+          <div class="guideBox-body js_accordion_body">
+            <p>領収書が必要な方は<a href="/pages/contact" target="_blank">「お問い合わせフォーム」</a>よりご連絡ください。</p>
+          </div>
+        </section>
+
+      </main>
+    </div>
+    {% render 'page-guide-contact' %}
+  </div>
+</article>

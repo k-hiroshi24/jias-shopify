@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-article-m-ordermade",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

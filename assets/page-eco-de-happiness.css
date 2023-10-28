@@ -1,0 +1,1153 @@
+@charset "utf-8";
+/****************************************
+ # Common Styling
+   - Tags
+ # Page Styling
+   - Overwrite layout
+   - Settings
+   - Button
+   - Hero
+   - Introduction
+   - Gallery
+   - About
+   - Function
+   - Movie
+   - Category
+   - Coordination
+****************************************/
+/*--------------------------------------------------------------
+# Common Styling
+--------------------------------------------------------------*/
+/* Tags
+--------------------------------------------- */
+.rte img { height: auto; }
+.rte img:not([style]) { margin-block: 0; }
+br.pc { display: none; }
+@media screen and (min-width: 720px) {
+  br.sp { display: none; }
+  br.pc { display: inline; }
+}
+/*--------------------------------------------------------------
+# Page Styling
+--------------------------------------------------------------*/
+/* Overwrite layout
+--------------------------------------------- */
+.breadcrumbs-container {
+  margin-bottom: 0;
+  padding-bottom: 1.25rem;
+}
+.site-page {
+  margin-block: 0 100px;
+  border-top: 1px solid #e6e6e6;
+}
+.page-masthead {
+  margin-block: 0;
+}
+.page-content {
+  margin-block: 0;
+}
+@media screen and (min-width: 720px) {
+  .breadcrumbs-container {
+    margin-bottom: 0;
+    padding-bottom: 1.75rem;
+  }
+}
+
+/* Settings
+--------------------------------------------- */
+.site-page {
+  --baseFont: 'Zen Maru Gothic', sans-serif;
+  --fontWight: 400;
+  --fontWight-bold: 500;
+  --colorHeading: #3e2603;
+  --colorButton: #3e2603;
+  --colorButton_darken: #261702;
+  --colorButton_hover: #fff;
+  --bgColor: #f5f2ed;
+
+  font-family: var(--baseFont);
+  font-weight: var(--fontWight);
+}
+.site-page .font-serif {
+  font-family: "Noto Serif", serif;
+}
+.site-page h1,
+.site-page h2,
+.site-page h3,
+.site-page h4,
+.site-page h5,
+.site-page h6 {
+  color: var(--colorHeading);
+  font-family: var(--baseFont);
+  font-weight: var(--fontWight-bold);
+}
+.site-page h2,
+.site-page .h2 {
+  font-size: min(30px, (30 / 390 * 100vw));
+  letter-spacing: .05em;
+}
+.site-page .h3 {
+  margin-right: -.05em;
+  font-size: min(25px, (23 / 390 * 100vw));
+  letter-spacing: .05em;
+}
+@media screen and (min-width: 720px) {
+  .site-page h2,
+  .site-page .h2 {
+    font-size: 40px;
+  }
+  .site-page .h3 {
+    font-size: 28px;
+  }
+}
+
+/* Button
+--------------------------------------------- */
+.site-page .button-secondary.EcoHapi-button {
+  width: fit-content;
+  margin-inline: auto;
+  padding-block: 1.25em;
+  padding-inline: 3.8em;
+  border-radius: 2.2em;
+  color: var(--colorButton);
+  font-size: min(18px, (18 / 390 * 100vw));
+  text-align: center;
+  background-color: transparent;
+  display: block;
+  position: relative;
+}
+.site-page .button-secondary.EcoHapi-button::after {
+  content: '';
+  width: .75em;
+  height: .75em;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  border-radius: 0;
+  background-color: transparent;
+  transform: rotate(-45deg) skew(-7deg, -7deg);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 1em;
+  margin: auto;
+  opacity: 1;
+}
+.site-page .button-secondary.EcoHapi-button:not(.disabled):focus,
+.site-page .button-secondary.EcoHapi-button:not(.disabled):hover {
+  color: var(--colorButton_hover);
+  background-color: var(--colorButton);
+}
+.btn-area {
+  width: 95%;
+  display: flex;
+  max-width: 850px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1599px) {
+  .btn-area {
+    max-width: 700px;
+  }
+  .site-page .button-secondary.EcoHapi-button {
+    width: 330px!important;
+  }
+}
+@media screen and (max-width: 1399px) {
+  .btn-area {
+    display: block;
+    max-width: 320px;
+  }
+  .site-page .button-secondary.EcoHapi-button {
+    width: 100%;
+  }
+  .site-page .button-secondary.EcoHapi-button:first-child {
+    margin-bottom:0!important;
+  }
+  .site-page .button-secondary.EcoHapi-button:nth-child(2) {
+    margin-top:20px!important;
+  }
+}
+@media screen and (min-width: 720px) {
+  .site-page .button-secondary.EcoHapi-button {
+    width: 370px;
+    padding-block: 21px;
+  }
+}
+
+/* Hero
+--------------------------------------------- */
+.rte .page-masthead--body_title {
+  margin-block: 0;
+  padding-block: 6.5%;
+  position: relative;
+}
+.rte .page-masthead--body_title img {
+  max-width: 731px;
+  width: 80%;
+}
+.rte .page-masthead-body-hero {
+  max-height: 1000px;
+  height: calc(850 / 780 * 100vw);
+}
+.rte .page-masthead-body-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+
+@media screen and (min-width: 720px) {
+  .rte .page-masthead--body_title {
+    padding-block: 50px;
+  }
+  .rte .page-masthead--body_title img {
+    width: 62%;
+  }
+  .rte .page-masthead-body-hero {
+    height: calc(390 / 780 * 100vw);
+  }
+}
+
+/* Introduction
+--------------------------------------------- */
+.site-page .EcoHapiIntro-title {
+  text-align: center;
+}
+.site-page .EcoHapiIntro {
+  position: relative;
+}
+.site-page .EcoHapiIntro-title {
+  width: fit-content;
+  margin: 0 auto;
+  padding-block: 30% 7%;
+  line-height: 1.8;
+  position: relative;
+}
+.site-page .EcoHapiIntro-catch {
+  font-size: min(18px, (18 / 390 * 100vw));
+  font-weight: var(--fontWight-bold);
+  line-height: 1.3;
+  text-align: left;
+  text-indent: -1em;
+  transform: rotate(-9deg);
+  position: absolute;
+  left: 3.5em;
+  bottom: min(150px,55%);
+}
+.site-page .EcoHapiIntro-catch::after {
+  content: '';
+  width: 170%;
+  padding-top: 15.45%;
+  background: url('https://cdn.shopify.com/s/files/1/0587/8438/3170/files/eco-de-happiness-balloon01.png') no-repeat center center/100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -49%;
+  margin: auto;
+  transform: rotate(-5deg);
+}
+.site-page .EcoHapiIntro-desc {
+  margin-block: 0;
+  padding-inline: 1em 0;
+  font-size: min(16px, (15 / 390 * 100vw));
+  text-align: center;
+}
+.site-page .EcoHapiIntro-illust1 {
+  max-width: 865px;
+  width: 117%;
+  position: absolute;
+  top: -19%;
+  left: -63%;
+  z-index: -1;
+}
+.site-page .EcoHapiIntro-illust2 {
+  max-width: 121px;
+  width: 16%;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  z-index: -1;
+}
+.site-page .EcoHapiIntro-illust3 {
+  max-width: 908px;
+  width: 118%;
+  position: absolute;
+  top: 26%;
+  left: -104%;
+  z-index: -1;
+}
+.site-page .EcoHapiIntro-illust4 {
+  max-width: 722px;
+  width: 93%;
+  position: absolute;
+  top: 59%;
+  right: -53%;
+  z-index: -1;
+}
+.site-page .EcoHapiIntro-button {
+  margin-block: 12%;
+}
+.site-page .EcoHapiIntro-img {
+  max-width: 2000px;
+  padding-block-end: min(150px, (150 / 780 * 100vw));
+  display: flex;
+  justify-content: space-between;
+}
+.site-page .EcoHapiIntro-img img {
+  max-width: 450px;
+  width: 50%;
+}
+.site-page .EcoHapiIntro-img-left {
+  padding-right: min(40px, (40 / 780 * 100vw));
+  position: relative;
+  top: min(150px, (150 / 780 * 100vw));
+}
+.site-page .EcoHapiIntro-img-right {
+  padding-left: min(40px, (40 / 780 * 100vw));
+}
+@media screen and (min-width: 720px) {
+  .site-page .EcoHapiIntro-title {
+    padding-block: 440px 40px;
+  }
+  .site-page .EcoHapiIntro-catch {
+    font-size: 20px;
+    left: 20px;
+    bottom: 180px;
+  }
+  .site-page .EcoHapiIntro-desc {
+    font-size: 18px;
+  }
+  .site-page .EcoHapiIntro-button {
+    margin-block: 70px;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .site-page .EcoHapiIntro-button {
+    margin-block-end: 0;
+  }
+  .site-page .EcoHapiIntro-illust1 {
+    top: -11%;
+    left: auto;
+    right: 66%;
+  }
+  .site-page .EcoHapiIntro-illust2 {
+    top: auto;
+    bottom: -9%;
+    left: 73%;
+    right: auto;
+  }
+  .site-page .EcoHapiIntro-illust3 {
+    top: auto;
+    bottom: -82%;
+    left: auto;
+    right: 68%;
+  }
+  .site-page .EcoHapiIntro-illust4 {
+    top: auto;
+    bottom: -52%;
+    left: 78%;
+    right: auto;
+  }
+  .site-page .EcoHapiIntro-imgWrap {
+    width: 100vw;
+    height: calc(100% - 150px);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    z-index: -1;
+  }
+  .site-page .EcoHapiIntro-img {
+    width: 100%;
+    padding-block: 0;
+  }
+  .site-page .EcoHapiIntro-img img {
+    width: calc(450 / 1900 * 100vw);
+  }
+  .site-page .EcoHapiIntro-img-left,
+  .site-page .EcoHapiIntro-img-right {
+    padding-inline: 0;
+  }
+}
+
+/* Gallery
+--------------------------------------------- */
+.site-page .EcoHapiGallery {
+  max-width: 1200px;
+  margin: 13.5% auto 0;
+  position: relative;
+}
+.site-page .EcoHapiGallery-swiper {
+  padding-inline: 20px;
+  overflow: visible;
+}
+.site-page .EcoHapiGallery-slide {
+  max-width: 1200px;
+}
+.site-page .EcoHapiGallery-pagination {
+  display: none;
+}
+.site-page .EcoHapiGallery-button-prev.swiper-button-disabled,
+.site-page .EcoHapiGallery-button-next.swiper-button-disabled {
+  opacity: 0;
+}
+.site-page .EcoHapiGallery-button-prev,
+.site-page .EcoHapiGallery-button-next {
+  width: min(111px, (111 / 780 * 100vw));
+  color: var(--colorButton);
+  transition:
+    color .1s cubic-bezier(.4,0,.2,1),
+    opacity .1s cubic-bezier(.4,0,.2,1);
+}
+.site-page .EcoHapiGallery-button-prev:hover,
+.site-page .EcoHapiGallery-button-next:hover {
+  color: var(--colorButton_darken);
+}
+.site-page .EcoHapiGallery-button-prev::after,
+.site-page .EcoHapiGallery-button-next::after {
+  content: '';
+}
+.site-page .EcoHapiGallery-button-prev {
+  left: -5px;
+}
+.site-page .EcoHapiGallery-button-next {
+  right: -5px;
+}
+.site-page .EcoHapiGallery-button-prev svg,
+.site-page .EcoHapiGallery-button-next svg {
+  width: 100%;
+}
+.site-page .EcoHapiGallery-illust {
+  width: min(466 / 790 * 100vw);
+  position: absolute;
+  top: -68%;
+  left: -10px;
+  z-index: -1;
+}
+@media screen and (min-width: 720px) {
+  .site-page .EcoHapiGallery {
+    margin-block:
+  }
+  .site-page .EcoHapiGallery::after {
+    content: '';
+    width: calc(100vw - 150px);
+    height: 250px;
+    background-color:var(--bgColor);
+    position: absolute;
+    left: calc(50% - 50vw);
+    bottom: 0;
+    z-index: -1;
+  }
+  .site-page .EcoHapiGallery-swiper {
+    padding-inline: 0;
+  }
+  .site-page .EcoHapiGallery-slide {
+    width: calc(1200 / 1500 * 100vw);
+  }
+  .site-page .EcoHapiGallery-button-prev {
+    left: -80px;
+  }
+  .site-page .EcoHapiGallery-button-next {
+    right: -80px;
+  }
+  .site-page .EcoHapiGallery-pagination {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .site-page .EcoHapiGallery-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -20px;
+  }
+  .site-page .EcoHapiGallery-pagination .swiper-pagination-bullet {
+    width: min(150px, (150 / 1500 * 100vw));
+    height: 2px;
+    background-color: #fff;
+    opacity: 1;
+    transition: background-color .1s cubic-bezier(.4,0,.2,1);
+  }
+  .site-page .EcoHapiGallery-pagination .swiper-pagination-bullet:hover {
+    background-color: var(--colorButton_darken);
+  }
+  .site-page .EcoHapiGallery-pagination .swiper-pagination-bullet-active{
+    background: var(--colorButton);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .site-page .EcoHapiGallery {
+    margin-block: min(300px, (300 / 1500 * 100vw)) 0;
+  }
+  .site-page .EcoHapiGallery-illust {
+    display: none;
+  }
+}
+
+/* About
+--------------------------------------------- */
+.site-page .EcoHapiAbout {
+  padding-block: 13.5% 0;
+}
+.site-page .EcoHapiAbout h2 {
+  margin-block: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
+}
+.site-page .EcoHapiAbout h2 svg {
+  width: min(396px, (396 / 790 * 100vw));
+}
+.site-page .EcoHapiAboutBox {
+  margin-block: 10% 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.site-page .EcoHapiAboutBox::after {
+  content: '';
+  width: 100vw;
+  height: 100%;
+  background-color: var(--bgColor);
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 50vw);
+  z-index: -1;
+}
+.site-page .EcoHapiAboutBox-title {
+  margin: 0;
+  padding-block: 8% 7%;
+}
+.site-page .EcoHapiAboutBox-desc {
+  margin: 0;
+}
+.site-page .EcoHapiAboutBox-thumb {
+  width: 100%;
+  height: calc(380 / 700 * 100vw);
+  order: -1;
+  position: relative;
+}
+.site-page .EcoHapiAboutBox-thumb::before {
+  content: '';
+  width: 100vw;
+  height: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 50vw);
+}
+.site-page .EcoHapiAboutBox-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.site-page .EcoHapiAboutDetail {
+  padding-block: min(140px,13.5%) min(100px,15%);
+  position: relative;
+}
+.site-page .EcoHapiAboutDetail::after {
+  content: '';
+  width: 100vw;
+  height: 100%;
+  background-color: var(--bgColor);
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 50vw);
+  z-index: -1;
+}
+@media screen and (min-width: 720px) {
+  .site-page .EcoHapiAbout h2 svg {
+    width: 220px;
+  }
+  .site-page .EcoHapiAboutBox {
+    margin-block: 75px 0;
+  }
+  .site-page .EcoHapiAboutDetail {
+    max-width: 1120px;
+    width: 85%;
+    margin-inline: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .site-page .EcoHapiAbout {
+    position: relative;
+  }
+  .site-page .EcoHapiAbout::after {
+    content: '';
+    width: calc(100vw - 150px);
+    height: 100%;
+    background-color: var(--bgColor);
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 50vw);
+    z-index: -1;
+  }
+  .site-page .EcoHapiAboutBox {
+    margin-inline: calc(50% - 50vw);
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 0 60px;
+  }
+  .site-page .EcoHapiAboutBox::after {
+    display: none;
+  }
+  .site-page .EcoHapiAboutBox-title {
+    max-width: 695px;
+    margin-block: auto 0;
+    padding: 30px 50px 20px 0;
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .site-page .EcoHapiAboutBox-desc {
+    max-width: 695px;
+    margin-block: 0 auto;
+    padding: 0 50px 30px 0;
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .site-page .EcoHapiAboutBox-thumb {
+    width: 50vw;
+    height: 100%;
+    grid-area: 1 / 1 / 3 / 2;
+  }
+  .site-page .EcoHapiAboutBox-thumb::before {
+    display: none;
+  }
+  .site-page .EcoHapiAboutDetail::after {
+    display: none;
+  }
+}
+
+/* Function
+--------------------------------------------- */
+.site-page .EcoHapiFunction {
+  padding-block: 13.5% 0;
+}
+.site-page .EcoHapiFunction h2 {
+  margin-block: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
+}
+.site-page .EcoHapiFunction h2 svg {
+  width: min(396px, (396 / 790 * 100vw));
+}
+.site-page .EcoHapiFunctionBox {
+  margin-block: 9% 0;
+  display: flex;
+  flex-direction: column;
+}
+.site-page .EcoHapiFunctionBox-title {
+  margin-block: 7.8% 10.4%;
+  padding-inline: min(24px, (24 / 780 * 100vw));
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: .25em .67em;
+}
+.site-page .EcoHapiFunctionBox-title img {
+  grid-area: 1 / 1 / 3 / 2;
+}
+.site-page .EcoHapiFunctionBox-title span {
+  margin-block: auto 0;
+  line-height: 1;
+  grid-area: 1 / 2 / 2 / 3;
+}
+.site-page .EcoHapiFunctionBox-title small {
+  margin-block: 0 auto;
+  font-size: .47em;
+  line-height: 1;
+  grid-area: 2 / 2 / 3 / 3;
+}
+.site-page .EcoHapiFunctionBox--linen .EcoHapiFunctionBox-title img,
+.site-page .EcoHapiFunctionBox--tekion .EcoHapiFunctionBox-title img {
+  width: min(120px, (120 / 780 * 100vw));
+}
+.site-page .EcoHapiFunctionBox--neko .EcoHapiFunctionBox-title img {
+  width: min(187px, (187 / 780 * 100vw));
+}
+.site-page .EcoHapiFunctionBox-desc {
+  margin-block: 0;
+  padding-inline: min(24px, (24 / 780 * 100vw));
+}
+.site-page .EcoHapiFunctionBox-thumb {
+  width: 100%;
+  height: calc(380 / 700 * 100vw);
+  order: -1;
+  position: relative;
+}
+.site-page .EcoHapiFunctionBox-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.site-page .EcoHapiFunctionBox-thumb-desc {
+  width: min(140px, (230 / 750 * 100vw));
+  height: min(120px, (200 / 750 * 100vw));
+  display: grid;
+  place-items: center;
+  text-align: center;
+  position: absolute;
+  top: -2em;
+  left: -.75em;
+}
+.site-page .EcoHapiFunctionBox-thumb-desc span {
+  padding-block: .5em 0;
+  color: #fff;
+  font-weight: var(--fontWight-bold);
+  letter-spacing: .03em;
+  line-height: 1.25;
+  position: relative;
+  z-index: 1;
+}
+.site-page .EcoHapiFunctionBox-thumb-desc svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+@media screen and (min-width: 720px) {
+  .site-page .EcoHapiFunction {
+    padding-block: 160px 0;
+  }
+  .site-page .EcoHapiFunction h2 svg {
+    width: 220px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .site-page .EcoHapiFunctionBox {
+    max-width: 1200px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: auto auto;
+  }
+  .site-page .EcoHapiFunctionBox-title {
+    margin-block: auto 0;
+    padding-inline: 65px 0;
+    font-size: 28px;
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .site-page .EcoHapiFunctionBox-title small {
+    padding-block: .5em 0;
+    font-size: 16px;
+  }
+  .site-page .EcoHapiFunctionBox--linen .EcoHapiFunctionBox-title img,
+  .site-page .EcoHapiFunctionBox--tekion .EcoHapiFunctionBox-title img {
+    width: 47px;
+  }
+  .site-page .EcoHapiFunctionBox--neko .EcoHapiFunctionBox-title img {
+    width: 72px;
+  }
+  .site-page .EcoHapiFunctionBox-desc {
+    margin-block: 0 auto;
+    padding: 40px 65px 0;
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .site-page .EcoHapiFunctionBox-thumb {
+    width: 100%;
+    height: auto;
+    grid-area: 1 / 1 / 3 / 2;
+  }
+  .site-page .EcoHapiFunctionBox-thumb-desc {
+    width: 160px;
+    height: 140px;
+    top: max(-60px, (-60 / 2000 * 100vw));
+    left: max(-60px, (-60 / 2000 * 100vw));
+  }
+  .site-page .EcoHapiFunctionBox-thumb-desc span {
+    font-size: 20px;
+  }
+}
+
+/* Movie
+--------------------------------------------- */
+.site-page .EcoHapiMovie {
+  padding-block: min(150px,40%) 0;
+}
+.site-page .EcoHapiMovie-title {
+  width: fit-content;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.site-page .EcoHapiMovie-title img {
+  width: min(250px, 68%);
+}
+.site-page .EcoHapiMovie-catch {
+  font-size: min(18px, (18 / 390 * 100vw));
+  font-weight: var(--fontWight-bold);
+  line-height: 1.3;
+  text-align: center;
+  transform: rotate(-9deg);
+  position: absolute;
+  top: -5em;
+  left: 2em;
+}
+.site-page .EcoHapiMovie-catch::after {
+  content: '';
+  width: 143%;
+  padding-top: 46%;
+  background: url('https://cdn.shopify.com/s/files/1/0587/8438/3170/files/eco-de-happiness-balloon02.png') no-repeat center center/100% 100%;
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: -25%;
+  margin: auto;
+  transform: rotate(7deg);
+}
+.site-page .EcoHapiMovie-body {
+  max-width: 1200px;
+  margin: 10% auto 0;
+}
+.site-page .EcoHapiMovie-footer {
+  padding-block: 43% 15.625%;
+  position: relative;
+}
+.site-page .EcoHapiMovie-footer::before {
+  content: '';
+  width: min(562px, 75%);
+  height: min(197px, (197 / 562 * 100vw));
+  display: block;
+  background: url(https://cdn.shopify.com/s/files/1/0587/8438/3170/files/eco-de-happiness-bg01.png) no-repeat center center/contain;
+  position: absolute;
+  top: 1%;
+  left: 0;
+  z-index: -1;
+}
+.site-page .EcoHapiMovie-footer::after {
+  content: '';
+  width: min(859px,140%);
+  height: min(695px, (695 / 859 * 100vw));
+  display: block;
+  background: url(https://cdn.shopify.com/s/files/1/0587/8438/3170/files/eco-de-happiness-bg02.png) no-repeat center center/contain;
+  position: absolute;
+  top: -28%;
+  left: 40%;
+  z-index: -2;
+}
+.site-page .EcoHapiMovie-footer img {
+  max-width: 318px;
+  margin-inline: auto;
+  display: block;
+}
+@media screen and (min-width: 720px) {
+  .EcoHapiMovie {
+    padding-top: 150px;
+  }
+  .EcoHapiMovie-title img {
+    width: 277px;
+  }
+  .site-page .EcoHapiMovie-catch {
+    font-size: 20px;
+    top: -60px;
+    left: -170px;
+  }
+  .site-page .EcoHapiMovie-body {
+    margin-block: 100px 0;
+  }
+  .site-page .EcoHapiMovie-footer {
+    padding-block: 350px 200px;
+    background-position: left 5%,
+    background-size: 40%, 72%;
+  }
+  .site-page .EcoHapiMovie-footer img {
+    max-width: 972px;
+    width: 72%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .site-page .EcoHapiMovie-catch {
+    left: -40px;
+  }
+  .site-page .EcoHapiMovie-footer::before {
+    width: min(562px, 42%);
+    top: 58px;
+  }
+  .site-page .EcoHapiMovie-footer::after {
+    width: min(859px,75%);
+    top: -540px;
+  }
+}
+
+/* Category
+--------------------------------------------- */
+.site-page .EcoHapiCategory {
+  padding-block: 15%;
+  position: relative;
+}
+.site-page .EcoHapiCategory::after {
+  content: '';
+  width: 100vw;
+  height: 100%;
+  background-color:var(--bgColor);
+  position: absolute;
+  top: 0;
+  right: calc(50% - 50vw);
+  z-index: -1;
+}
+.site-page .EcoHapiCategory h2 {
+  margin-block: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
+}
+.site-page .EcoHapiCategory h2 svg {
+  width: min(396px, (396 / 790 * 100vw));
+}
+.site-page .EcoHapiCategoryLists {
+  margin: 10% 0 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px 10px;
+}
+.site-page .EcoHapiCategoryLists li {
+  max-width: 320px;
+  width: calc(50% - 5px);
+  font-size: calc(1em - 1px);
+  text-align: center;
+}
+.site-page .EcoHapiCategoryLists li a {
+  text-decoration: none;
+}
+@media screen and (min-width: 720px) {
+  .site-page .EcoHapiCategory::after {
+    width: calc(100vw - 150px);
+  }
+  .site-page .EcoHapiCategory {
+    padding-block: 160px;
+  }
+  .site-page .EcoHapiCategory h2 svg {
+    width: 220px;
+  }
+  .site-page .EcoHapiCategoryLists li {
+    max-width: 386px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .site-page .EcoHapiCategoryLists {
+    margin-block: 90px 0;
+    gap: 40px;
+  }
+  .site-page .EcoHapiCategoryLists li {
+    max-width: 386px;
+    width: calc((100% - 80px) / 3);
+    font-size: 18px;
+  }
+}
+
+/* Coordination
+--------------------------------------------- */
+.site-page .EcoHapiCoordination {
+  padding-block: 14%;
+}
+.site-page .EcoHapiCoordination h2 {
+  margin-block: 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
+}
+.site-page .EcoHapiCoordination h2 svg {
+  width: min(396px, (396 / 790 * 100vw));
+}
+.site-page .EcoHapiCoordinationBox {
+  margin-block: 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.site-page .EcoHapiCoordinationBox-head {
+  width: calc(275 / 790 * 100vw);
+  margin-block: calc(220 / 790 * 100vw * -1) 0;
+}
+.site-page .EcoHapiCoordinationBox-head svg {
+  width: 19%;
+  margin: 10% 0 0 10%;
+}
+.site-page .EcoHapiCoordinationBox-time {
+  width: calc(265 / 790 * 100vw);
+  height: calc(265 / 790 * 100vw);
+  margin: 0 0 0 -10px;
+  padding-right: .5em;
+  font-size: min(40px, (40 / 780 * 100vw));
+  font-weight: var(--fontWight-bold);
+  letter-spacing: .01em;
+  line-height: .75;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.site-page .EcoHapiCoordinationBox--08 .EcoHapiCoordinationBox-time {
+  background: url('https://cdn.shopify.com/s/files/1/0587/8438/3170/files/eco-de-happiness-time08.png') no-repeat left center/90% 90%;
+}
+.site-page .EcoHapiCoordinationBox--12 .EcoHapiCoordinationBox-time {
+  background: url('https://cdn.shopify.com/s/files/1/0587/8438/3170/files/eco-de-happiness-time12.png') no-repeat left center/90% 90%;
+}
+.site-page .EcoHapiCoordinationBox--15 .EcoHapiCoordinationBox-time {
+  background: url('https://cdn.shopify.com/s/files/1/0587/8438/3170/files/eco-de-happiness-time15.png') no-repeat left center/90% 90%;
+}
+.site-page .EcoHapiCoordinationBox--22 .EcoHapiCoordinationBox-time {
+  background: url('https://cdn.shopify.com/s/files/1/0587/8438/3170/files/eco-de-happiness-time22.png') no-repeat left center/90% 90%;
+}
+.site-page .EcoHapiCoordinationBox-body {
+  width: calc(100% - (275 / 790 * 100vw));
+}
+.site-page .EcoHapiCoordinationBox-body p {
+  margin: 2em 0 1em -30%;
+  font-size: min(40px, (35 / 780 * 100vw));
+  font-weight: var(--fontWight-bold);
+  line-height: 1.8;
+  letter-spacing: .01em;
+}
+.site-page .EcoHapiCoordinationBox-time small {
+  font-size: .7em;
+  line-height: 1.07;
+  display: block;
+}
+.site-page .EcoHapiCoordinationBox-thumb {
+  margin-right: calc(50% - 50vw);
+  padding-left: 20px;
+  order: -1;
+}
+.site-page .EcoHapiCoordinationBox-thumb-desc {
+  margin-left: calc(220 / 790 * 100vw);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+.site-page .EcoHapiCoordinationBox-thumb-desc h4 {
+  margin-block: -1em .25em;
+  padding: .46em 1.4em;
+  font-size: min(28px, (28 / 790 * 100vw));
+  line-height: 1;
+  position: relative;
+  left: -.4em;
+  z-index: 1;
+}
+.site-page .EcoHapiCoordinationBox-thumb-desc h4 svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.site-page .EcoHapiCoordinationBox-thumb-desc p {
+  width: 100%;
+  margin: 0;
+  padding-inline: 1em 0;
+  font-size: min(18px, (18 / 790 * 100vw));
+  line-height: 2;
+  letter-spacing: .05em;
+}
+@media screen and (min-width: 720px) {
+  .site-page .EcoHapiCoordination {
+    padding-block: 150px 0;
+  }
+  .site-page .EcoHapiCoordination h2 svg {
+    width: 220px;
+  }
+  .site-page .EcoHapiCoordinationBox-head {
+    margin-block: -220px 0;
+  }
+  .site-page .EcoHapiCoordinationBox-time {
+    width: 253px;
+    height: 238px;
+    font-size: 40px;
+  }
+  .site-page .EcoHapiCoordinationBox-thumb-desc h4 {
+    font-size: 20px;
+    left: 0;
+  }
+  .site-page .EcoHapiCoordinationBox-thumb-desc p {
+    font-size: 18px;
+    padding-left: 2em;
+  }
+  .site-page .EcoHapiCoordinationBox-body p {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .site-page .EcoHapiCoordinationBox {
+    flex-wrap: nowrap;
+  }
+  .site-page .EcoHapiCoordinationBox-head {
+    margin-block: 0;
+  }
+  .site-page .EcoHapiCoordinationBox-time {
+    padding: 0;
+  }
+  .site-page .EcoHapiCoordinationBox-thumb {
+    width: 50vw;
+    padding: 1em 0 0;
+    flex-shrink: 0;
+    order: 1;
+  }
+  .site-page .EcoHapiCoordinationBox-thumb-desc {
+    margin: 20px 0 0;
+    flex-direction: row;
+  }
+  .site-page .EcoHapiCoordinationBox-thumb-desc h4 {
+    margin: 0;
+    flex-shrink: 0;
+  }
+  .site-page .EcoHapiCoordinationBox-thumb-desc p {
+    padding-inline: .75em 50px;
+  }
+  .site-page .EcoHapiCoordinationBox-body {
+    width: calc(100% - 220px);
+    padding-right: 2em;
+  }
+  .site-page .EcoHapiCoordinationBox-body p {
+    margin-block: 300px 1em;
+    margin-inline: -5em 0;
+  }
+  .site-page .EcoHapiCoordinationBox-body img {
+    margin-inline: -5em auto;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .site-page .EcoHapiCoordinationBox-head {
+    margin-inline: max(-150px, -2%);
+  }
+  .site-page .EcoHapiCoordinationBox-body p {
+    margin-inline: -1em;
+  }
+}
+
+
+@media screen and (max-width: 1399px) {
+  .btn-bottom-area {
+    width:95%;
+    max-width:320px;
+    margin:0 auto;
+  }
+}
+.btn-to-showroom {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  text-decoration:none!important;
+  text-underline-offset: auto;
+  align-items: center;
+}
+.btn-to-showroom svg {
+  width:50px;
+}
+.btn-to-showroom span {
+  margin-left: 10px; 
+}

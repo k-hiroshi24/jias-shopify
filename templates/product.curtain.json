@@ -1,0 +1,131 @@
+{
+  "sections": {
+    "main": {
+      "type": "static-product-api",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "618045ee-f1df-4a9f-9b15-ed60a8b328bd": {
+          "type": "html",
+          "settings": {
+            "custom_html": "<div class=\"jias-product-memo\">\n  <p>送料・開梱オプションについてはカート画面で計算ができます。<br>「<a href=\"\/pages\/guide-delivery\" target=\"_blank\">商品のお届けについて<\/a>」をご確認の上ご購入ください。<\/p>\n<\/div>"
+          }
+        },
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "29422fbe-b2e3-495e-854a-ecddd6a4f37f": {
+          "type": "html",
+          "disabled": true,
+          "settings": {
+            "custom_html": "<img src=\"https:\/\/placehold.jp\/720x90.png\" style=\"\">"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "form",
+        "description",
+        "618045ee-f1df-4a9f-9b15-ed60a8b328bd",
+        "vendor",
+        "29422fbe-b2e3-495e-854a-ecddd6a4f37f",
+        "share"
+      ],
+      "settings": {
+        "gallery_aspect_ratio": "natural",
+        "gallery_image_crop": false,
+        "gallery_thumbnail_position": "below",
+        "gallery_video_autoplay": true,
+        "gallery_video_looping": true,
+        "gallery_hover_zoom": "disabled",
+        "gallery_click_to_zoom": "always"
+      }
+    },
+    "16612469784165e2c5": {
+      "type": "custom-fields-products",
+      "blocks": {
+        "4bf17587-1135-456f-8d40-f1f473d1ae8f": {
+          "type": "cf_w_tabs2",
+          "settings": {
+            "key": "custom_fields.product_tab_field",
+            "section_title_text": "",
+            "section_title_tag": "h2",
+            "section_title_margin_bottom": 1,
+            "section_title_color": "",
+            "cols": "12",
+            "margin_top": 5,
+            "margin_bottom": 5,
+            "widget_dynamic_height": true,
+            "widget_height_speed": 0,
+            "widget_fade_speed": 0,
+            "title_font_size": 18,
+            "title_font_color": "",
+            "title_font_custom": false,
+            "title_font": "helvetica_n4",
+            "title_padding": ".625rem 1rem",
+            "body_font_size": 16,
+            "body_font_color": "",
+            "body_padding": "0"
+          }
+        }
+      },
+      "block_order": [
+        "4bf17587-1135-456f-8d40-f1f473d1ae8f"
+      ],
+      "settings": {
+      }
+    },
+    "recommendations": {
+      "type": "static-product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "あなたへのおすすめ商品"
+      }
+    },
+    "reviews": {
+      "type": "static-product-reviews",
+      "settings": {
+      }
+    },
+    "recently-viewed": {
+      "type": "static-recently-viewed",
+      "settings": {
+        "enable_recently_viewed_products": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16612469784165e2c5",
+    "recommendations",
+    "reviews",
+    "recently-viewed"
+  ]
+}

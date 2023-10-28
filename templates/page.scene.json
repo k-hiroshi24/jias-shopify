@@ -1,0 +1,105 @@
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "settings": {
+      }
+    },
+    "1650594086a90a4e90": {
+      "type": "dynamic-collection-list",
+      "blocks": {
+        "1650594086c48c9905-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "living-tag",
+            "image": "shopify:\/\/shop_images\/shine-living_ec78e2fc-8ee0-4fb9-89a0-c53a9faf2267.jpg",
+            "title": "",
+            "description": ""
+          }
+        },
+        "1650594086c48c9905-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "dining",
+            "image": "shopify:\/\/shop_images\/shine-dining-02_2cf5ad1e-694c-479d-aca1-21e02a1ca057.jpg",
+            "title": "",
+            "description": ""
+          }
+        },
+        "1650594086c48c9905-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "bedroom",
+            "image": "shopify:\/\/shop_images\/shine-bedroom_0e3c7102-fccc-4551-a57e-acfe692a6cff.jpg",
+            "title": "",
+            "description": ""
+          }
+        },
+        "1650594086c48c9905-3": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "kids-room",
+            "image": "shopify:\/\/shop_images\/shine-kidsroom_2e4008fb-5265-40e9-95c0-3d637cf9a895.jpg",
+            "title": "",
+            "description": ""
+          }
+        },
+        "1650594086c48c9905-4": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "outdoor-living",
+            "image": "shopify:\/\/shop_images\/shine-outdoor_df70e84d-cf8d-4a0e-a2c9-a10db43bbe9e.jpg",
+            "title": "",
+            "description": ""
+          }
+        },
+        "540d089e-109c-4c62-914f-2a3b66618dec": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "home-office",
+            "image": "shopify:\/\/shop_images\/shine-workspace-03_dfc3b8a9-96b3-4fef-aeb8-7d2f7ff473c9.jpg",
+            "title": "",
+            "description": ""
+          }
+        },
+        "a7347213-4207-437d-83b1-606d2597b5e1": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "japanese-style-room",
+            "image": "shopify:\/\/shop_images\/shine-japan_abc232be-7992-4f41-aa43-604a10b8a162.jpg",
+            "title": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "1650594086c48c9905-0",
+        "1650594086c48c9905-1",
+        "1650594086c48c9905-2",
+        "1650594086c48c9905-3",
+        "1650594086c48c9905-4",
+        "540d089e-109c-4c62-914f-2a3b66618dec",
+        "a7347213-4207-437d-83b1-606d2597b5e1"
+      ],
+      "settings": {
+        "show_only_available": true,
+        "title": "",
+        "thumbnail_columns_desktop": 2,
+        "thumbnail_columns_mobile": 2,
+        "image-crop": "original",
+        "text_alignment": "text-alignment-left",
+        "cta_label": "",
+        "cta_link": "",
+        "cta_button_style": "primary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1650594086a90a4e90"
+  ]
+}

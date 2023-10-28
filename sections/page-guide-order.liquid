@@ -1,0 +1,71 @@
+{% render 'breadcrumbs' %}
+<article class="site-page" data-template-page>
+  <header class="page-masthead">
+    <h1 class="page-title">
+      {{ page.title }}
+    </h1>
+  </header>
+
+  <div class="page-content rte">
+    <div class="guideContainer">
+      <aside class="guideSideNav">
+        {% render 'page-guide-nav' %}
+      </aside>
+      <main class="guideMain">
+        <section id="order01" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">ご注文の流れについて</h2>
+          <div class="guideBox-body js_accordion_body">
+            <ul class="nodisc">
+              <li>1.購入したい商品のページを開きます。<br />素材、色、数量、配送方法、オプション加工などの選択をし、「納品について」の納期をご確認後チェックを入れ「カートに追加する」ボタンを押してください。自動的にカート画面へ進みます。<br />送料・開梱設置送料についてはカート画面で計算ができます。<br />詳しくは<a href="{{ pages["guide-delivery"].url }}">「商品のお届けについて」</a>をご確認の上ご購入ください。</li>
+              <li>2.カート画面に移動後、購入金額と送料を確認後ご注文手続きボタンを押します。（送料計算ツールでお住まいの地域と郵便番号を入力し送料の確認ができます） </li>
+              <li>3.連絡先情報入力画面でメールアドレスとお届け先住所、連絡先情報を入力し、「配送方法の選択へすすむ」ボタンを押します。（すでにアカウントをお持ちの方はログインしていただけますと入力が省けスムーズに決済が進められます）</li>
+              <li>4.お届け先とご連絡先を確認し、配送方法を選択し、「お支払いへ進む」ボタンを押します。</li>
+              <li>5.お支払い画面で、支払方法を選択し、必要事項を入力し、内容をご確認後ボタンをクリックします。</li>
+              <li>6.ご注文完了画面になり、登録いただいたメールアドレスへ、JIAS ONLINEから「ご注文内容の確認」メールが届きます。これでご注文は完了です。</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="order02" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">ご注文状況について</h2>
+          <div class="guideBox-body js_accordion_body">
+            <p>会員登録済みのお客様は、ご注文状況を<a href="{{ routes.account_url }}">「マイアカウントページ」</a>の「注文履歴」からご確認いただけます。</p>
+          </div>
+        </section>
+
+        <section id="order03" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">ご注文後にメールが届かない場合</h2>
+          <div class="guideBox-body js_accordion_body">
+            <p>お客様がドメイン指定受信設定やメールフィルタリングソフトなどをご利用の場合、弊社からのメールが正常に受信できずご案内内容をご確認いただけない場合がございます。万が一、弊社からのメール（自動配信メールを含みます）が届かない場合は、下記に該当していないかをご確認ください。</p>
+            <p><span class="b">ドメイン指定受信または拒否設定をされていませんか？</span><br />弊社からのメールはすべて @jias.co.jp のドメインより送信いたします。お手数をおかけし恐れ入りますが、受信可能な設定へのご変更をお願いいたします。</p>
+            <p><span class="b">メールフィルタリングソフトなどのセキュリティソフトを利用されていませんか？</span><br />セキュリティソフトをご利用の場合、弊社からのメールが自動的に迷惑メールフォルダやスパムメールフォルダなどに振り分けられている場合がございます。念のためそちらのフォルダもご確認くださいますようお願いいたします。</p>
+            <p>以上に該当せず、弊社からのメール（自動配信メールを含みます）が届いていない場合は、ご注文を正しく受け付けできていない可能性がございます。ご注文状況を確認させていただきますので、お手数をおかけいたしますが<a href="/pages/contact" target="_blank">「お問い合わせフォーム」</a>よりご連絡くださいますようお願い申し上げます。</p>
+          </div>
+        </section>
+
+        <section id="order04" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">法人のお客様へ</h2>
+          <div class="guideBox-body js_accordion_body">
+            <p>まとまった数量をご希望される法人のお客様へは、内容に応じて別途お見積りをさせていただきますので、<a href="/pages/contact" target="_blank">「お問い合わせフォーム」</a>よりお申し込みください。</p>
+            <ul class="nodisc">
+              <li>1.お問い合わせの際は必ず法人名をご記載ください。</li>
+              <li>2.ご希望の商品とあわせて【物件名・ご希望の納期・ご納品先（市区町村）・配送方法】をお知らせいただけますと、よりスムーズなご対応が可能となります。恐れ入りますがご協力のほどお願い申し上げます。</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="order05" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">注文ができたか確認したい</h2>
+          <div class="guideBox-body js_accordion_body">
+            <p>ご注文後、自動配信メール（件名に【JIAS ONLINE】が含まれています）が届いている場合は、ご注文を正常に受け付けしております。</p>
+            <p>弊社からのメールはすべて @jias.co.jp のドメインより送信しております。ドメイン拒否などを設定されている場合、弊社からのメールが届かない可能性がございます。また、セキュリティソフト・メールフィルタリングソフトなどにより迷惑メールフォルダなどに自動的に振り分けられる可能性もございます。<br />自動配信メールが届いていない場合は、お手数ですが弊社が送信したメールが迷惑フォルダ等に振り分けられていないか、今一度ご確認くださいますようお願いいたします。また、携帯電話のメールアドレスをご利用の場合、パソコンから送信されるドメインを拒否する設定になっていないかご確認ください。</p>
+            <p>会員にご登録済みのお客様は、<a href="{{ routes.account_url }}">マイアカウントページ</a>の「注文履歴」よりご注文状況をご確認いただけます。</p>
+            <p>メールが届いていない場合や、ご注文履歴の確認ができない場合は、ご注文状況について弊社にて確認させていただきますので、お手数ですが<a href="/pages/contact" target="_blank">「お問い合わせフォーム」</a>よりご連絡ください。</p>
+          </div>
+        </section>
+
+      </main>
+    </div>
+    {% render 'page-guide-contact' %}
+  </div>
+</article>

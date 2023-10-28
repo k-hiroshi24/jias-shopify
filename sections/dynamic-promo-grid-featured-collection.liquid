@@ -1,0 +1,145 @@
+<script type="application/pxs-animation-mapping+json">
+  {
+    "blocks": [".promo-grid-featured-collection-container"],
+    "elements": [
+      ".home-section--title",
+      ".productgrid--no-results-button"
+    ]
+  }
+</script>
+
+{% assign selected_collection = collections[section.settings.collection] %}
+{% assign product_count = section.settings.product_count | at_most: selected_collection.products_count %}
+{% assign products = selected_collection.products %}
+
+<section class="promo-grid--container featured-collection__container promo-grid-featured-collection-container">
+  {% if section.settings.title != blank %}
+    <h2 class="home-section--title">
+      {{ section.settings.title | escape }}
+    </h2>
+  {% endif %}
+
+  {%- capture classes -%}
+    home-section--content
+    promo-grid--height-{{ section.settings.section_height }}
+  {%- endcapture -%}
+
+
+
+  <div class="productgrid--wrapper">
+
+    {% if products.size > 0 %}
+      <ul
+        class="
+          productgrid--items
+        "
+        data-html="productgrid-items"
+        data-productgrid-items
+      >
+        {% for product in products limit: product_count %}
+          {% if product.type == 'PPLR_HIDDEN_PRODUCT' %}{% continue %}{% endif %}
+          {%
+            render 'product-grid-item',
+            product: product
+          %}
+        {% endfor %}
+      </ul>
+    {% else %}
+      <div class="productgrid--no-results">
+        <h2 class="productgrid--no-results-title">
+          {%- if collection.all_products_count == 0 -%}
+            {{ 'product_grid.no_results.empty' | t }}
+          {%- else -%}
+            {{ 'product_grid.no_results.tags_empty' | t }}
+          {%- endif -%}
+        </h2>
+
+        <a class="productgrid--no-results-button" href="{{ routes.all_products_collection_url }}">
+          {{ 'search.general.view_all_products' | t }}
+        </a>
+      </div>
+    {% endif %}
+    {% unless disable_cta_button %}
+      {% if section.settings.cta_label != blank %}
+        <div class="blogposts--footer">
+        <a
+          class="blogposts--footer-link"
+          {% if selected_collection.url != blank %}href="{{ selected_collection.url }}"{% endif %}
+        >
+          {{ section.settings.cta_label | escape }}
+        <span class="blogposts--footer-icon">
+        {% render 'icon-library', id: 'icon-signpost-arrow' %}
+        </span>
+        </a>
+        </div>
+      {% endif %}
+    {% endunless %}
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Grid Featured Collection",
+  "class": "promo-grid--section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Grid"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "product_count",
+      "min": 1,
+      "max": 25,
+      "step": 1,
+      "label": "Number of products",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "Call to action"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Label",
+      "default": "Shop collection"
+    },
+    {
+      "type": "select",
+      "id": "cta_button_style",
+      "label": "Button style",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        }
+      ],
+      "default": "primary"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Grid Featured Collection",
+      "category": "Collection"
+    }
+  ],
+  "templates": [
+    "index",
+    "product"
+  ]
+}
+
+{% endschema %}

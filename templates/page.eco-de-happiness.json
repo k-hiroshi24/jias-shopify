@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-eco-de-happiness",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

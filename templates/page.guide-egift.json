@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-guide-egift",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

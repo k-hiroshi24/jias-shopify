@@ -1,0 +1,9 @@
+{% if page.metafields["my_fields"]["parent_collection"] != blank %}
+  <div class="custom-field custom-field__parent-collection custom-field__type--single-line-text-field">
+    <h3 class="custom-field--title">親コレクションハンドル</h3>
+    <div class="custom-field--value">
+      {{ page.metafields["my_fields"]["parent_collection"] }}
+
+    </div>
+  </div>
+{% endif %}

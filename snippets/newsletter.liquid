@@ -1,0 +1,81 @@
+{% assign form_id = form_id | default: nil %}
+{% assign newsletter_tags = 'prospect' %}
+
+{%- if template contains 'password' %}
+  {% assign newsletter_tags = newsletter_tags | append: ', password page' %}
+{%- else -%}
+  {% assign newsletter_tags = newsletter_tags | append: ', newsletter' %}
+{%- endif -%}
+
+{% unless input_id %}
+  {% assign input_id = 'newsletter_email' %}
+{% endunless %}
+
+<div class="newsletter">
+  {% form 'customer', id: form_id %}
+    {% if form.posted_successfully? %}
+
+      {%- if form_id == 'footer_newsletter_'-%}
+        <script type="text/javascript">
+          document.addEventListener('DOMContentLoaded', () => getElementById("shopify-section-static-footer").scrollIntoView(true));
+        </script>
+      {%- endif -%}
+
+      <p class="newsletter-success">
+        {{ 'general.newsletter.success' | t }}
+      </p>
+    {% else %}
+
+      {%- if form.errors -%}
+        {{ form.errors | default_errors }}
+      {%- endif -%}
+
+      {% if template == 'page.register-newsletter' %}
+        <div class="newsletter-privacy">
+          <div class="rte personalData">
+            <h2>個人情報の取得に関する同意</h2>
+             <p>株式会社ジアスは、お客様のプライバシーを尊重して保護するために最大限の努力を投じています。当ストアのメルマガ登録における<a href="/policies/privacy-policy#personal_information" target="_blank">「個人情報の取り扱いについて」</a>に同意いただける場合は、以下のチェックボックスをオンにしてください。</p>
+             <input type="checkbox" id="personal_data" name="personal_data" required>
+             <label for="personal_data">当ストアのメルマガ登録における<a href="/policies/privacy-policy#personal_information" target="_blank">「個人情報の取り扱いについて」</a>に同意します。</label>
+             <p>お客様の個人情報を尊重して保護するための弊社の取り組みについては、弊社の<a href="https://www.jias.co.jp/privacy" target="_blank" rel="noopener noreferrer" title="株式会社ジアス 個人情報保護方針のページへ">個人情報保護方針</a>をご覧ください。</p>
+           </div>
+        </div>
+      {%- endif -%}
+
+      <input
+        type="hidden"
+        name="contact[tags]"
+        value="{{ newsletter_tags }}"
+      >
+
+      <div class="form-fields-inline pxs-newsletter-form-fields">
+        <div class="form-field newsletter-input">
+          <input
+            class="form-field-input form-field-text"
+            name="contact[email]"
+            id="{{ input_id }}"
+            type="email"
+            aria-label="{{ 'general.newsletter.placeholder' | t }}"
+          >
+
+          <label
+            class="form-field-title"
+            for="{{ input_id }}"
+          >
+            {{ 'general.newsletter.placeholder' | t }}
+          </label>
+        </div>
+
+        <div class="form-field newsletter-submit">
+          <button
+            class="button-primary"
+            name="subscribe"
+            type="submit"
+          >
+            {{ 'general.newsletter.subscribe' | t }}
+          </button>
+        </div>
+      </div>
+    {% endif %}
+  {% endform %}
+</div>

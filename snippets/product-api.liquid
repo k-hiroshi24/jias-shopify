@@ -1,0 +1,480 @@
+{% comment %}
+  @param product {Object}
+    The product object
+
+  @param layout {String}
+    The layout type
+
+  @param is_product_modal {Boolean}
+    Is the snippet being loaded in a Quick shop
+
+  @param is_featured_product {Boolean}
+    Is the snippet being loaded in a Featured product
+
+  @param onboarding {Boolean}
+    Is there onboarding content
+
+  @param show_dynamic_checkout_button {Boolean}
+    If true, show dynamic checkout button
+
+  @param select_first_available_variant {Boolean}
+    If true, select the first available variant
+
+  @param gallery_aspect_ratio {String}
+    This is the gallery aspect ratio, can be one of 'natural', 'short', 'square', 'long'
+
+  @param gallery_thumbnail_position {String}
+    This is the gallery thumbnail position, can be one of 'below', or 'left'
+
+  @param gallery_image_crop {Boolean}
+    Whether to crop images
+
+  @param gallery_hover_zoom {String}
+    This is the hover zoom setting, which is either 'disabled', 'separate', or 'replace'
+
+  @param gallery_click_to_zoom {String}
+    This is the click to zoom setting, which is either 'disabled', 'mobile', 'desktop', or 'always'
+{% endcomment %}
+
+<script>
+function callApi(id) {
+  $.ajax({
+        url: 'https://api01.jias.co.jp/api/getmaterialstock.aspx',
+        type: 'POST',
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify( { "id": "10001",    "userid": "ZF",    "itemcode":[id] }  ),
+      }).done(function (data) {
+        showresult(data);
+      }).fail(function (data) {
+        console.log('error');
+      });
+};
+
+var product_id;
+window.addEventListener('load', function(){
+  $.when(
+		product_id = $("dt:contains('商品番号')").next("dd").text()
+	).done(function() {
+		callApi(product_id);
+	});
+  
+  const html = `
+  <h3>生地在庫情報</h3>
+  <div class="c-table">
+    <div id="row1" class="c-table__row">
+      <p class="c-table__ttl">在庫状況区分名</p>
+      <p id="zaikokbn2"></p>
+    </div>
+    <div id="row2" class="c-table__row">
+      <p class="c-table__ttl">在庫残メーター数</p>
+      <p id="freesu"></p>
+    </div>
+    <div id="row3" class="c-table__row">
+      <p class="c-table__ttl">入荷時期情報</p>
+      <p id="nyukainfo1"></p>
+    </div>
+    <div id="row5" class="c-table__row">
+      <p class="c-table__ttl">入荷補足情報</p>
+      <p id="nyukainfo3"></p>
+    </div>
+  </div>
+  <div id="row6" class="c-table__row">
+    <p id="attention"></p>
+  </div>`;
+  // const element = document.querySelector('.product-description');
+  // const tg = document.querySelector('.postage-table');
+  // $('.postage-table').prepend(html);
+
+  // テスト用挿入位置
+  //$("#jias-product > div").eq(0).append(html);
+  // 本番用挿入位置
+  $(".jias-product-detail > div").eq(1).append(html);
+});
+
+function showresult(data) {
+  console.log(data);
+  //基幹DBエラー
+    if( data.errcode == 1001 ){
+      const zaikoitem = document.getElementById('zaikokbn');
+      var src = zaikoitem.firstElementChild.getAttribute('src');
+      src = src.replace("label0", "label7");
+      zaikoitem.firstElementChild.setAttribute('src',src);
+    
+      // 表側に描画するimgの複製
+       let imgclone = zaikoitem.firstElementChild.cloneNode(true);
+      zaikoitem.style.display = "block"; 
+      const zaikoitem2 = document.getElementById('zaikokbn2');
+      zaikoitem2.appendChild(imgclone);  
+      document.getElementById('row2').remove();
+      document.getElementById('row3').remove();
+      document.getElementById('row5').remove();
+  }else if( data.errcode == 9 ){ //内部DBエラー  
+      const zaikoitem = document.getElementById('zaikokbn');
+      var src = zaikoitem.firstElementChild.getAttribute('src');
+      src = src.replace("label0", "label8");
+      zaikoitem.firstElementChild.setAttribute('src',src);
+      
+      // 表側に描画するimgの複製
+       let imgclone = zaikoitem.firstElementChild.cloneNode(true);
+      zaikoitem.style.display = "block"; 
+      const zaikoitem2 = document.getElementById('zaikokbn2');
+      zaikoitem2.appendChild(imgclone);  
+      document.getElementById('row2').remove();
+      document.getElementById('row3').remove();
+      document.getElementById('row5').remove();
+    
+  }else {
+    
+    if( (data.stockinfo[0].zaikokbn != 6 && data.stockinfo[0].zaikokbn != 7) || data.stockinfo[0].zaikokbn == 1 ) {   
+      const zaikoitem = document.getElementById('zaikokbn');
+      var zaikokbn = data.stockinfo[0].zaikokbn;
+      var src = zaikoitem.firstElementChild.getAttribute('src');
+      src = src.replace("label0", "label"+zaikokbn);
+      zaikoitem.firstElementChild.setAttribute('src',src);
+      
+      // 表側に描画するimgの複製
+      zaikoitem.style.display = "block"; 
+      let imgclone = zaikoitem.firstElementChild.cloneNode(true);
+      const zaikoitem2 = document.getElementById('zaikokbn2');
+      var zaikokbn2 = data.stockinfo[0].zaikokbn;
+      zaikoitem2.appendChild(imgclone);
+    }
+    if( data.stockinfo[0].freesu && (data.stockinfo[0].zaikokbn == 1 || data.stockinfo[0].zaikokbn == 2 || data.stockinfo[0].zaikokbn == 3) ) {
+      const zaikoitem = document.getElementById('freesu');
+      var zaiko = data.stockinfo[0].freesu;
+      zaikoitem.textContent = zaiko+"m";
+    }else {
+      document.getElementById('row2').remove();
+    }
+    // 入荷時期情報の値あり、在庫状況が「品薄再入荷あり」「欠品中再入荷あり」の時に表示
+    if( data.stockinfo[0].nyukainfo1 && (  data.stockinfo[0].zaikokbn == 2 || data.stockinfo[0].zaikokbn == 4  ) ) {
+        const nyukainfo1item = document.getElementById('nyukainfo1');
+        var nyukainfo1 = data.stockinfo[0].nyukainfo1;
+        nyukainfo1item.textContent = nyukainfo1;
+    }else {
+      document.getElementById('row3').remove();
+    }
+     // 入荷補足情報の値あり、在庫状況が「品薄再入荷あり」「欠品中再入荷あり」の時に表示
+    if( data.stockinfo[0].nyukainfo3 && (data.stockinfo[0].zaikokbn == 2 || data.stockinfo[0].zaikokbn == 4) ) {
+      const nyukainfo3item = document.getElementById('nyukainfo3');
+      var nyukainfo3 = data.stockinfo[0].nyukainfo3;
+      nyukainfo3item.textContent = nyukainfo3;
+    }else {
+      document.getElementById('row5').remove();
+    }
+  }  
+  const attentionitem = document.getElementById('attention');
+  if(data.errcode == 1001){
+    attentionitem.innerHTML = '【ご留意事項】<br>生地在庫情報は、20:00~翌7:00にシステムメンテナンスを行っております。<br>生地在庫情報につきましては、7:00~20:00にて改めてご確認いただきますようお願い申し上げます。';
+  }else if(data.errcode == 9 ){
+    attentionitem.innerHTML = '【ご留意事項】<br>生地在庫情報システムに不具合が発生しております。<br>システム復旧までいま暫くお待ちいただきますようお願い申し上げます。';  
+  }else if( data.stockinfo[0].zaikokbn == 1 ){
+    attentionitem.innerHTML = '【ご留意事項】<br>生地在庫は販売状況により変動致します。特に週末は多くの生地が販売されることがございます。 ご購入時に改めて在庫を確認の上、ご契約いただきますようお願い申し上げます。';
+  }else if(data.stockinfo[0].zaikokbn == 2){
+    attentionitem.innerHTML = '【ご留意事項】<br>生地在庫は販売状況により変動致します。<br>特に週末は多くの生地が販売されることがございます。 ご購入時に改めて在庫を確認の上、ご契約いただきますようお願い申し上げます。<br> 在庫切れとなった場合は、生地の再入荷を予定しております。<br> 再入荷時期に関しては、「入荷時期情報」をご確認ください。<br>「入荷時期情報」は、生地の入荷時期(弊社工場入荷時期)となります。 <br>お客様に納品できる時期については、担当コーディネーターまでご確認下さい。';
+  }
+  else if(data.stockinfo[0].zaikokbn == 3){
+    attentionitem.innerHTML = '【ご留意事項】<br>生地在庫は販売状況により変動致します。特に週末は多くの生地が販売されることがございます。<br> ご購入時に改めて在庫を確認の上、ご契約いただきますようお願い申し上げます。<br>在庫切れとなった場合は、生地の再入荷予定はございません。<br> 予めご了承いただきますようお願い申し上げます。';
+  }
+  else if(data.stockinfo[0].zaikokbn == 4){
+    attentionitem.innerHTML = '【ご留意事項】<br>「入荷時期情報」は、生地の入荷時期(弊社工場入荷時期)となります。 <br>お客様に納品できる時期については、担当コーディネーターまでご確認下さい。';
+  }
+  else if(data.stockinfo[0].zaikokbn == 5){
+    attentionitem.innerHTML = '【ご留意事項】<br>生地の再入荷予定はございません。 <br>何卒ご了承いただきますようお願い申し上げます。';
+  }
+};
+</script>  
+
+{% assign onboarding = onboarding | default: false %}
+{% assign layout = layout | default: nil %}
+{% assign is_featured_product = is_featured_product | default: false %}
+
+{% liquid
+  assign selected_variant = product.selected_variant
+
+  if product.variants.size == 1 or select_first_available_variant
+    assign selected_variant = product.selected_or_first_available_variant
+  endif
+%}
+
+{%- liquid
+  if product.tags contains settings.product_ask_samples_tag
+    assign product_ask_samples = true
+  endif
+-%}
+{% if product_ask_samples %}
+  <style>
+    .product-pricing--hidden { margin-bottom: -2em; visibility: hidden; }
+    .product-html--hidden { display: none; }
+  </style>
+{% endif %}
+
+{% assign compare_at_price = selected_variant.compare_at_price %}
+{% assign price = selected_variant.price %}
+{% assign sku = selected_variant.sku %}
+{% assign product_available = product.available %}
+
+{% comment %}For a potential divider in the product.description we need to split the content{% endcomment %}
+{% assign readmore_split = product.description | split: '<!-- more -->' %}
+
+{% if onboarding %}
+  {% assign compare_at_price = 2999 %}
+  {% assign price = 1999 %}
+{% endif %}
+
+{% assign on_sale = false %}
+{% if compare_at_price > price %}
+  {% assign on_sale = true %}
+{% endif %}
+
+{% assign consistent_saved = false %}
+{% capture consistent_savings %}
+  {%
+    render 'consistent-savings',
+    variants: product.variants,
+    on_sale: on_sale
+  %}
+{% endcapture %}
+{% if consistent_savings contains 'true' %}
+  {% assign consistent_saved = true %}
+{% endif %}
+
+{%- capture share_buttons -%}
+  {% assign social_image = false %}
+  {% if product.featured_image %}
+    {% assign social_image = product.featured_image | img_url: '1024x' %}
+  {% endif %}
+  {% assign social_url = shop.url | append: product.url %}
+  {%-
+    render 'share-buttons',
+    snippet_title: 'general.share_buttons.title',
+    social_image: social_image,
+    social_title: product.title,
+    social_url: social_url
+  -%}
+{%- endcapture  -%}
+
+<article class="product--outer">
+  {%
+    render 'product-gallery',
+    product: product,
+    select_first_available_variant: select_first_available_variant,
+    aspect_ratio: gallery_aspect_ratio,
+    thumbnail_position: gallery_thumbnail_position,
+    image_crop: gallery_image_crop,
+    gallery_click_to_zoom: gallery_click_to_zoom,
+    gallery_hover_zoom: gallery_hover_zoom
+  %}
+
+  <div class="product-main">
+    <div class="product-details" data-product-details>
+      {%
+        render 'product-badge',
+        class_root: 'product',
+        product: product,
+        product_available: product_available,
+        on_sale: on_sale,
+        price: price,
+        compare_at_price: compare_at_price,
+        show_saved: true,
+        include_range: false,
+        selected_variant: selected_variant,
+      %}
+      {% for block in section.blocks %}
+        <div class="product-details__block" {{ block.shopify_attributes }}>
+          {% case block.type %}
+            {% when 'title' %}
+              {% if is_product_modal %}
+                <h2 class="product-title">
+                  <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+                </h2>
+              {% else %}
+                {% if template == 'index' %}
+                  <h2 class="product-title">
+                {% else %}
+                  <p id="zaikokbn"><img src="{{ 'label0.png' | asset_img_url: '183x31' }}" alt="在庫情報"></p>
+                  <div id="product-label-container"></div>
+                  <h1 class="product-title">
+                {% endif %}
+                  {% unless onboarding %}
+                    {{ product.title }}
+                  {% else %}
+                    {{ 'onboarding.product.title' | t }}
+                  {% endunless %}
+                {% if template == 'index' %}
+                  </h2>
+                {% else %}
+                  </h1>
+                {% endif %}
+              {% endif %}
+            {% when 'vendor' %}
+              {% if product.vendor != blank or onboarding %}
+                <div class="product-vendor">
+                  {% unless onboarding %}
+                    {%- capture vendor_link -%}
+                      {{ product.vendor | link_to_vendor }}
+                    {%- endcapture -%}
+                    {{ 'product.general.by_vendor_html' | t: vendor_link: vendor_link }}
+                  {% else %}
+                    {{ 'onboarding.product.by_vendor' | t }}
+                  {% endunless %}
+                </div>
+              {% endif %}
+            {% when 'price' %}
+              {% if settings.product_ratings_reviews %}
+
+                <div class="product-ratings">
+                  <span class="shopify-product-reviews-badge" data-id="{{ product.id }}">
+                    <span class="spr-badge">
+                      <span class="spr-starrating spr-badge-starrating">
+                        <i class="spr-icon spr-icon-star-empty"></i>
+                        <i class="spr-icon spr-icon-star-empty"></i>
+                        <i class="spr-icon spr-icon-star-empty"></i>
+                        <i class="spr-icon spr-icon-star-empty"></i>
+                        <i class="spr-icon spr-icon-star-empty"></i>
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              {% endif %}
+              <div
+                class="product-pricing{% if product_ask_samples %} product-pricing--hidden{% endif %}"
+                aria-live="polite"
+                data-product-pricing
+              >
+
+                {%
+                  render 'product-price',
+                  product: product,
+                  class_root: 'product',
+                  price: price,
+                  price_varies: false,
+                  compare_at_price: compare_at_price,
+                  compare_at_price_varies: false,
+                  on_sale: on_sale,
+                  emphasize_price: false,
+                  show_original: true,
+                  show_range: false,
+                  include_unit_price: true,
+                  include_tax_line: true,
+                  include_hidden_price: true
+                %}
+
+                <form data-payment-terms-target style="display: none;"></form>
+              </div>
+                <!-- Stamped - Begin Star Rating Badge -->
+<span
+class="stamped-product-reviews-badge stamped-main-badge"
+data-id="{{ product.id }}"
+data-product-sku="{{ product.handle }}"
+data-product-title="{{product.title}}"
+data-product-type="{{product.type}}"
+style="display: block;">
+{{product.metafields.stamped.badge}}
+</span>
+<!-- Stamped - End Star Rating Badge -->
+            {% when 'sku' %}
+              {% unless onboarding %}
+                <div
+                  class="
+                    product-sku
+                    {% if sku == empty %}product-sku--empty{% endif %}
+                  "
+                >
+                  {{ 'product.general.sku_html' | t: sku: sku | strip_newlines }}
+                </div>
+              {% endunless %}
+
+            {% when 'description' %}
+              {% if readmore_split[0] != blank %}
+                <div class="product-description rte" data-product-description>
+                  {{ readmore_split[0] }}
+                </div>
+              {% endif %}
+            {% when 'form' %}
+              <div
+                class="product-form--regular"
+                data-product-form-regular
+              >
+                <div data-product-form-area>
+                  {% if is_product_modal %}
+                    <div data-product-quickshop-message class="product-message--container"></div>
+                  {% endif %}
+
+                  {% unless onboarding %}
+                    {%
+                      render 'product-form',
+                      product: product,
+                      show_dynamic_checkout_button: show_dynamic_checkout_button,
+                      selected_variant: selected_variant,
+                      is_product_modal: is_product_modal,
+                    %}
+
+                  {% endunless %}
+                </div>
+              </div>
+            {% when 'text' %}
+              <div class="product-text">
+                {{ block.settings.text }}
+              </div>
+            {% when 'html' %}
+              <div class="product-html{% if product_ask_samples %} product-html--hidden{% endif %}">
+                {{ block.settings.custom_html }}
+              </div>
+            {% when 'share' %}
+              <div class="product-share">
+                {{ share_buttons | strip_newlines }}
+              </div>
+            {% when '@app' %}
+              <div class="product-app">
+                {% render block %}
+              </div>
+            {% when 'view-product-link' %}
+              <a
+                class="product-link"
+                href="{{ product.url | within: collection }}"
+                data-product-details-link
+              >
+                {{ block.settings.text | escape }}
+              </a>
+          {% endcase %}
+        </div>
+      {% endfor %}
+
+      {% if layout == 'layout--three-col' %}
+        <div class="product-form--regular" data-product-form-regular>
+          <div data-product-form-area>
+            {% if is_product_modal %}
+              <div data-product-quickshop-message class="product-message--container"></div>
+            {% endif %}
+
+            {% unless onboarding %}
+              {%
+                render 'product-form',
+                product: product,
+                show_dynamic_checkout_button: show_dynamic_checkout_button,
+                selected_variant: selected_variant,
+                is_product_modal: is_product_modal,
+              %}
+            {% endunless %}
+
+            {% if is_product_modal == false %}
+              {{ share_buttons | strip_newlines }}
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if layout == 'layout--three-col' %}
+    <div class="product-form--alt" data-product-form-alt></div>
+  {% endif %}
+</article>
+
+{% if readmore_split[1] != blank and is_featured_product != true and is_product_modal != true %}
+  <div class="product-readmore rte" data-product-readmore>
+    {{ readmore_split[1] }}
+  </div>
+{% endif %}

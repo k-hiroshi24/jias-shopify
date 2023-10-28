@@ -1,0 +1,77 @@
+{% render 'breadcrumbs' %}
+<article class="site-page" data-template-page>
+  <header class="page-masthead">
+    <h1 class="page-title">
+      {{ page.title }}
+    </h1>
+  </header>
+
+  <div class="page-content rte">
+    <div class="guideContainer">
+      <aside class="guideSideNav">
+        {% render 'page-guide-nav' %}
+      </aside>
+      <main class="guideMain">
+        <section id="member01" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">会員情報について</h2>
+          <div class="guideBox-body js_accordion_body">
+            <p>JIAS ONLINE（ジアスオンライン）では、会員登録（アカウント登録）いただくことで、お買い物の際に情報を入力する手間が省けたり、マイアカウントページからご注文状況をご確認いただけるなど、より快適にお買い物をお楽しみいただける便利な機能をご用意しております。<br />会員登録には年会費や登録料などの料金は一切かかりません。1つのIDで、パソコン、スマートフォン、タブレットで共通してご利用いただけます。</p>
+          </div>
+        </section>
+
+        <section id="member02" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">会員登録（アカウント登録）の方法</h2>
+          <div class="guideBox-body js_accordion_body">
+            <p><a href="{{ routes.account_register_url }}" target="_blank">「アカウント作成ページ」</a>に姓名、メールアドレス、パスワードを入力後「作成する」ボタンをクリックし、アカウントを作成してください。<br />その後、ご登録いただいたメールアドレス宛に「お客様アカウントの確認」メールが届きますので、メール内のリンクよりショップへアクセスし、お買い物をお楽しみください。</p>
+          </div>
+        </section>
+
+        <section id="member03" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">マイアカウントページについて</h2>
+          <div class="guideBox-body js_accordion_body">
+            <p><a href="{{ routes.account_url }}">「マイアカウントページ」</a>とは、会員様個人のご登録情報や注文履歴などの情報を確認・変更していただける専用ページです。会員にご登録の上、ログインをしている状態でのみご利用いただけます。</p>
+          </div>
+        </section>
+
+        <section id="member04" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">ご登録内容の確認・変更</h2>
+          <div class="guideBox-body js_accordion_body">
+            <p><a href="{{ routes.account_url }}">「マイアカウントページ」</a>よりご登録情報の確認・変更、ご利用状況の確認が可能です。</p>
+            <p><span class="b">「ご注文履歴」</span><br /><a href="{{ routes.account_url }}">「マイアカウントページ」</a>→注文履歴でご確認していただけます。</p>
+            <p><span class="b">「お届け先住所の変更」</span><br /><a href="{{ routes.account_url }}">「マイアカウントページ」</a>→登録済の住所下部「◯件の住所を表示」→「お客様情報」→変更したい住所の「編集する」→変更事項を入力「住所を更新する」</p>
+            <ul class="memo">
+              <li>ご登録住所が複数ある場合には、お届け先住所の「デフォルトの住所として設定」にチェックを入れてください。</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="member05" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">パスワードを忘れてしまった</h2>
+          <div class="guideBox-body js_accordion_body">
+            <p>ログイン画面の「パスワードをお忘れですか？」→「あなたのパスワードをリセット」にご登録のメールアドレスを入力→届いたメールに記載されているURLをクリックし、ガイドに従い新しいパスワードを設定してください。</p>
+          </div>
+        </section>
+
+        <section id="member06" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">ご登録時のメールアドレスを忘れてしまった</h2>
+          <div class="guideBox-body js_accordion_body">
+            <p>ご登録時のメールアドレスを忘れてしまった場合、ログイン画面にて登録した可能性のあるメールアドレスを入力し、パスワードの入力、または「パスワードを忘れてしまったら」から再度パスワードの設定をお試しください。</p>
+            <p>パスワード再設定の画面にて、メールアドレスを入力した際に「アカウントが見つかりませんでした。」というメッセージが出た場合は、該当のメールアドレスでの会員登録（アカウント登録）が無い状況となります。</p>
+            <p>会員登録（アカウント登録）画面にて、メールアドレスを入力した際に「このメールアドレスは既にアカウントと紐付けられています。」というメッセージが出た場合は、該当のメールアドレスでの会員登録（アカウント登録）がある状態となりますので、「サインイン」から、パスワードの入力、または「パスワードを忘れてしまったら」から再度パスワードの設定をお願いいたします。</p>
+          </div>
+        </section>
+
+        <section id="member07" class="guideBox js_accordion_wrap">
+          <h2 class="guideBox-heading js_accordion_btn">二重登録をしてしまった</h2>
+          <div class="guideBox-body js_accordion_body">
+            <p>二重登録によりお買い物ができなくなるといった問題はございませんが、ご注文履歴の確認など、一人のお客様につき一つのアカウントでご利用いただくことを想定したサービス内容になっておりますので、不要なアカウントにつきましてはお手数ですが弊社までご連絡くださいませ。</p>
+            <ul class="memo">
+              <li>不要なアカウントを削除したい場合がございましたら、<a href="/pages/contact" target="_blank">「お問い合わせフォーム」</a>よりご連絡ください。</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+    {% render 'page-guide-contact' %}
+  </div>
+</article>

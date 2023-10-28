@@ -1,0 +1,17 @@
+{% render 'breadcrumbs' %}
+<article class="site-page rte" data-template-page>
+  <header class="page-masthead">
+    <h1 class="page-title">
+      {{ page.title }}
+    </h1>
+  </header>
+
+  <main class="guideMain">
+    <div class="page-content rte">
+      <section class="guideMainNav">
+        {% render 'page-guide-nav' %}
+      </section>
+      {% render 'page-guide-contact' %}
+    </div>
+  </main>
+</article>

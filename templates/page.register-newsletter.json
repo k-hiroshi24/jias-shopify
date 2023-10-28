@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-register-newsletter",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

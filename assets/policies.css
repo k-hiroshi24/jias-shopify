@@ -1,0 +1,32 @@
+@charset "utf-8";
+.shopify-policy__container {
+  --pageWidth: 960px;
+  max-width: var(--pageWidth); padding-left: var(--pageGutter); padding-right: var(--pageGutter); }
+.shopify-policy__title { margin-top: 30px; margin-bottom: 30px; }
+.shopify-policy__title h1 { color: var(--color_heading); font-size: var(--font-size-heading-1); }
+.shopify-policy__body h2 {
+  margin-bottom: 1.25em;
+  border-left: 5px solid currentColor;
+  padding: 3px 0 3px 15px;
+  font-size: var(--font-size-heading-3);
+  line-height: 1.5;
+  position: relative;
+}
+.shopify-policy__body h2::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: currentColor;
+  position: absolute;
+  top: 0;
+  left: 3px;
+}
+.shopify-policy__body a { text-decoration: underline; }
+@media screen and (min-width: 1024px) {
+  .shopify-policy__title { margin-top: 50px; margin-bottom: 50px; }
+  .shopify-policy__title h1 { font-size: var(--font-size-heading-medium); }
+  .shopify-policy__body h2 {
+    margin-top: 2.5rem;
+    padding-left: 20px;
+  }
+}

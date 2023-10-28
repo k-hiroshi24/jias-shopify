@@ -1,0 +1,181 @@
+{%- assign contact_subject_lists = '商品について, ご注文について, 保証・修理について, 配送について, 請求書・領収書について, その他' | split: ', ' -%}
+{% render 'breadcrumbs' %}
+<article class="site-page" data-template-page data-template-contact>
+
+  <header class="page-masthead">
+    <h1 class="page-title">
+      {{ page.title }}
+    </h1>
+  </header>
+  {% form 'contact' %}
+
+    {% if page.content != blank %}
+      <div class="page-content rte">
+        {{ page.content }}
+      </div>
+    {% endif %}
+
+    <div class="contact-page-content">
+      {% assign has_message = false %}
+
+      {% if form.errors != blank %}
+        {% assign has_message = true %}
+        {% assign message_type = 'error' %}
+      {% endif %}
+
+      {% if form.posted_successfully? %}
+        {% assign has_message = true %}
+        {% assign message_type = 'success' %}
+      {% endif %}
+
+      {% if has_message %}
+        <div class="contact-message message--{{ message_type }}">
+          {% case message_type %}
+            {% when 'success' %}
+              <p>
+                {{ 'contact.form.post_success' | t }}
+              </p>
+            {% when 'error' %}
+              {{ form.errors | default_errors }}
+          {% endcase %}
+        </div>
+      {% endif %}
+
+      <div class="form-fields-columns">
+        <div class="form-field form-field--half">
+          {% assign value = '' %}
+          {%- if form.last_name -%}
+            {% assign value = form.last_name %}
+          {%- elsif customer -%}
+            {% assign value = customer.last_name %}
+          {%- endif -%}
+
+          <input
+            class="form-field-input form-field-text {% if form.errors contains 'last_name' %}form-field-error{% endif %}"
+            id="contact_last-name"
+            name="contact[{{ 'contact.form.last_name' | t }}]"
+            type="text"
+            value="{{ value }}"
+            autocomplete="family-name">
+          <label class="form-field-title" for="contact_last-name">
+            {{ 'contact.form.last_name' | t }}
+          </label>
+        </div>
+
+        <div class="form-field form-field--half">
+          {% assign value = '' %}
+          {%- if form.first_name -%}
+            {% assign value = form.first_name %}
+          {%- elsif customer -%}
+            {% assign value = customer.first_name %}
+          {%- endif -%}
+
+          <input
+            class="form-field-input form-field-text {% if form.errors contains 'first_name' %}form-field-error{% endif %}"
+            id="contact_first-name"
+            name="contact[{{ 'contact.form.first_name' | t }}]"
+            type="text"
+            value="{{ value }}"
+            autocomplete="given-name">
+          <label class="form-field-title" for="contact_first-name">
+            {{ 'contact.form.first_name' | t }}
+          </label>
+        </div>
+
+      </div>
+
+      <div class="form-field">
+        {% assign value = '' %}
+        {%- if form.email -%}
+          {% assign value = form.email %}
+        {%- elsif customer -%}
+          {% assign value = customer.email %}
+        {%- endif -%}
+
+        <input
+          class="form-field-input form-field-text {% if form.errors contains 'email' %}form-field-error{% endif %}"
+          id="contact_email"
+          name="contact[email]"
+          type="email"
+          value="{{ value }}"
+          autocorrect="off"
+          autocapitalize="off">
+        <label class="form-field-title" for="contact_email">
+          {{ 'contact.form.email' | t }}
+        </label>
+      </div>
+
+      <div class="form-field">
+        {% assign value = '' %}
+        {%- if form.phone -%}
+          {% assign value = form.phone %}
+        {%- elsif customer -%}
+          {% assign value = customer.phone %}
+        {%- endif -%}
+        <input
+          class="form-field-input form-field-text {% if form.errors contains 'phone' %}form-field-error{% endif %}"
+          id="contact_phone"
+          name="contact[{{ 'contact.form.phone' | t }}]"
+          type="tel"
+          value="{{ value }}">
+        <label class="form-field-title" for="contact_phone">
+          {{ 'contact.form.phone' | t }}
+        </label>
+      </div>
+
+      <div class="form-field">
+        <div class="form-field-select-wrapper">
+          <select
+            class="form-field-input form-field-select form-field-filled"
+            id="contact_subject"
+            name="contact[{{ 'contact.form.subject' | t }}]">
+
+            {%- for contact_subject in contact_subject_lists -%}
+              {%- if forloop.first -%}
+                <option value="{{ contact_subject }}" selected>{{ contact_subject }}</option>
+              {%- else -%}
+                <option value="{{ contact_subject }}">{{ contact_subject }}</option>
+              {%- endif -%}
+            {%- endfor -%}
+
+          </select>
+
+          <label class="form-field-title" for="contact_subject">
+            {{ 'contact.form.subject' | t }}
+          </label>
+          {% render 'icon-chevron-down-small' %}
+
+        </div>
+      </div>
+
+      <div class="form-field">
+        {% assign value = '' %}
+        {%- if form.body -%}
+          {% assign value = form.body %}
+        {%- endif -%}
+        <textarea
+          class="form-field-input form-field-textarea {% if form.errors contains 'body' %}form-field-error{% endif %}"
+          id="contact_message"
+          name="contact[{{ 'contact.form.message' | t }}]">{{ value }}</textarea>
+
+        <label class="form-field-title" for="contact_body" required>
+          {{ 'contact.form.message' | t }}
+        </label>
+      </div>
+  	  <div class="rte">
+        <h2>個人情報の取得に関する同意</h2>
+  	     <p>株式会社ジアスは、お客様のプライバシーを尊重して保護するために最大限の努力を投じています。当ストアのお問い合わせにおける<a href="/policies/privacy-policy#personal_information" target="_blank">「個人情報の取り扱いについて」</a>に同意いただける場合は、以下のチェックボックスをオンにしてください。</p>
+         <input type="checkbox" id="personal_data" name="personal_data" required>
+         <label for="personal_data">当ストアのお問い合わせにおける<a href="/policies/privacy-policy#personal_information" target="_blank">「個人情報の取り扱いについて」</a>に同意します。</label>
+         <p>お客様の個人情報を尊重して保護するための弊社の取り組みについては、弊社の<a href="https://www.jias.co.jp/privacy" target="_blank" rel="noopener noreferrer" title="株式会社ジアス 個人情報保護方針のページへ">個人情報保護方針</a>をご覧ください。</p>
+       </div>
+
+       <div class="form-action-row">
+         <button class="button-primary contact-form-button" type="submit">
+          {{ 'contact.form.send' | t }}
+        </button>
+      </div>
+    </div>
+
+  {% endform %}
+</article>
