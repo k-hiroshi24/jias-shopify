@@ -1,209 +1,208 @@
 <style>
-.en-font {
-  font-family: "garamond-premier-pro", serif;
-  font-style: normal;
-  font-size: 100px;
-}
+  .en-font {
+    font-family: "garamond-premier-pro"
+    , serif;
+    font-style: normal;
+    font-size: 100px;
+  }
 
-body {
-  font-family: "fot-tsukumin-pr6n", sans-serif;
-  font-style: normal;
-  line-height: 2;
+  body {
+    font-family: "fot-tsukumin-pr6n"
+    , sans-serif;
+    font-style: normal;
+    line-height: 2;
 
-}
+  }
 
-p{
-  margin: 0;
-}
 
-figure{
-  margin: 0;
-}
+  .sp {
+    display: block;
+  }
+  @media screen and (max-width: 768px) {
+    .sp {
+      display: none;
+    }
+  }
 
-.reservation-btn {
-  display: block;
-  width: 300px;
-  padding: 15px 0;
-  margin: auto;
-  color: #000;
-  text-decoration: none;
-  text-align: center;
-  font-family: "canada-type-gibson", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  font-size: 15px;
-  line-height: 1;
-  margin-top: 80px;
-  position: relative;
-  z-index: 0;
-  transition: all 0.6s;
-}
 
-.reservation-btn::after {
-  position: absolute;
-  content: "";
-  background-image: url({{ 'title-bg-ring6.png' | asset_url }});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 150px;
-  height: 150px;
-  top: calc(50% - 0px);
-  left: calc(50% - 0px);
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  transition: all 0.6s;
-}
+  p {
+    margin: 0;
+  }
 
-.reservation-btn:hover.reservation-btn::after {
-  width: 300px;
-  height: 300px;
-}
+  figure {
+    margin: 0;
+  }
 
-.reservation-btn span {
-  display: block;
-  font-family: "fot-tsukumin-pr6n", sans-serif;
-  font-style: normal;
-  line-height: 2;
-  font-size: 15px;
-}
+  .reservation-btn {
+    display: block;
+    width: 300px;
+    padding: 15px 0;
+    margin: 80px auto auto;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    font-family: "canada-type-gibson"
+    , sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1;
+    position: relative;
+    z-index: 0;
+    transition: all 0.6s;
+  }
 
-.common-button {
-  display: block;
-  width: 300px;
-  padding: 5px 0;
-  margin: auto;
-  color: #000;
-  background: #fff;
-  border: 1px solid #000;
-  border-radius: 25px;
-  text-decoration: none;
-  text-align: center;
-  font-family: "canada-type-gibson", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  font-size: 21px;
-  position: relative;
-  z-index: 1;
-  transition: all 0.6s;
-}
-.common-button:hover {
-  background-color: #000;
-  color: #fff;
-  border: 1px solid #fff;
-}
+  .reservation-btn::after {
+    position: absolute;
+    content: "";
+    background-image: url('{{ 'title-bg-ring6.png' | asset_url }}');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    top: calc(50% - 0px);
+    left: calc(50% - 0px);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s;
+  }
 
-.common-button--bg-black {
-  display: block;
-  width: 300px;
-  padding: 5px 0;
-  margin: auto;
-  color: #fff;
-  background: #000;
-  border: 1px solid #fff;
-  border-radius: 25px;
-  text-decoration: none;
-  text-align: center;
-  font-family: "canada-type-gibson", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  font-size: 21px;
-  position: relative;
-  z-index: 1;
-  transition: all 0.6s;
-}
-.common-button--bg-black:hover {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
-}
-.mb-36 {
-  margin-bottom: 36px;
-}
+  .reservation-btn:hover.reservation-btn::after {
+    width: 300px;
+    height: 300px;
+  }
 
-.mb-62 {
-  margin-bottom: 62px;
-}
+  .reservation-btn span {
+    display: block;
+    font-family: "fot-tsukumin-pr6n"
+    , sans-serif;
+    font-style: normal;
+    line-height: 2;
+    font-size: 15px;
+  }
 
-.mb-12 {
-  margin-bottom: 12px;
-}
-@media screen and (max-width: 768px) {
+  .common-button {
+    display: block;
+    width: 300px;
+    padding: 5px 0;
+    margin: auto;
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    font-family: "canada-type-gibson"
+    , sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 21px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.6s;
+  }
+  .common-button:hover {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  .common-button--bg-black {
+    display: block;
+    width: 300px;
+    padding: 5px 0;
+    margin: auto;
+    color: #fff;
+    background: #000;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    font-family: "canada-type-gibson"
+    , sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 21px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.6s;
+  }
+  .common-button--bg-black:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+  }
   .mb-36 {
-    margin-bottom: 24px;
+    margin-bottom: 36px;
   }
 
   .mb-62 {
-    margin-bottom: 36px;
+    margin-bottom: 62px;
   }
-}
-.scroll {
-  font-size: 15px;
-  color: #fff;
-  text-align: center;
-  padding: 50px 0 100px;
-  position: relative;
-  z-index: 0;
-  /* top : 50%;
-  left : 50%;
-  transform: translateX(-50%) translateY(-50%); */
-}
-.scroll::after {
-  position: absolute;
-  content: "";
-  width: 1px;
-  height: 45px;
-  background-color: #fff;
-  top: calc(50% - 70px);
-  left: calc(50% - 5px);
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
 
-.yazirusi {
-  display: inline-flex;
-  transform: rotate(90deg);
-  position: relative;
-}
-.yazirusi::after {
-  content: "";
-  width: 45px;
-  height: 10px;
-  border-bottom: solid 1px;
-  border-right: solid 1px;
-  transform: skew(45deg);
-}
+  .mb-12 {
+    margin-bottom: 12px;
+  }
+  @media screen and (max-width: 768px) {
+    .mb-36 {
+      margin-bottom: 24px;
+    }
 
-.FV-section__wrapper {
-  background-image: url({{ 'FV-bg.png' | asset_url }});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  overflow: hidden;
-}
+    .mb-62 {
+      margin-bottom: 36px;
+    }
+  }
+  .scroll {
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0 100px;
+    position: relative;
+    z-index: 0;
+  }
+  .scroll::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 45px;
+    background-color: #fff;
+    top: calc(50% - 70px);
+    left: calc(50% - 5px);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
 
-/* FVの右上の円 */
-/* .FV-section__wrapper::before {
-  position: absolute;
-  content: "";
-  width: 800px;
-  height: 800px;
-  background-color: transparent;
-  border-radius: 50%;
-  border: 1px solid #fff;
-  top: -10%;
-  right: -40%;
-} */
+  .yazirusi {
+    display: inline-flex;
+    transform: rotate(90deg);
+    position: relative;
+  }
+  .yazirusi::after {
+    content: "";
+    width: 45px;
+    height: 10px;
+    border-bottom: solid 1px;
+    border-right: solid 1px;
+    transform: skew(45deg);
+  }
+
+  .FV-section__wrapper {
+    background-image: url('{{ 'FV-bg.png' | asset_url }}');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
 
 img {
-  width: 100%;
-  height: auto;
-}
+    width: 100%;
+    height: auto;
+  }
 
-/* FV */
-.FV {
-}
+  /* FV */
+  .FV {}
 
 .FV__wrapper {
   display: flex;
@@ -213,23 +212,23 @@ img {
 
 .FV__img01 {
   width: 65%;
-  aspect-ratio: 374/ 406;
+  aspect-ratio: 374 / 406;
   object-fit: cover;
 }
 
 .FV__img01 img {
-  aspect-ratio: 374/ 406;
+  aspect-ratio: 374 / 406;
   object-fit: cover;
 }
 
 .FV__img02 {
   width: 35%;
-  aspect-ratio: 208/ 261;
+  aspect-ratio: 208 / 261;
   object-fit: cover;
 }
 
 .FV__img02 img {
-  aspect-ratio: 208/ 261;
+  aspect-ratio: 208 / 261;
   object-fit: cover;
 }
 
@@ -239,7 +238,7 @@ img {
 
 .FV__logo-img {
   width: 60%;
-  margin: 64px auto 64px;
+  margin: 64px auto;
 }
 
 /* secton1 */
@@ -265,7 +264,7 @@ img {
 }
 
 .img-with-text__img img {
-  aspect-ratio: 244/ 292;
+  aspect-ratio: 244 / 292;
   object-fit: cover;
 }
 
@@ -281,8 +280,8 @@ img {
 }
 
 .section__wrapper {
-  padding: 120px 0 0px;
-  background: url({{ 'bg-img2.png' | asset_url }});
+  padding: 120px 0 0;
+  background: url('{{ 'bg-img2.png' | asset_url }}');
   background-repeat: no-repeat;
   background-position: 0 20px;
   background-size: cover;
@@ -295,12 +294,12 @@ img {
 .section__wrapper::after {
   position: absolute;
   content: "";
-  background: url({{ 'bg-img3.png' | asset_url }});
+  background: url('{{ 'bg-img3.png' | asset_url }}');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   top: 0;
-  right: 0px;
+  right: 0;
   z-index: -10;
   width: 700px;
   height: 1400px;
@@ -310,7 +309,7 @@ img {
 .section__wrapper::before {
   position: absolute;
   content: "";
-  background: url({{ 'bg-img4.png' | asset_url }});
+  background: url('{{ 'bg-img4.png' | asset_url }}');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -322,22 +321,7 @@ img {
   display: inline-block;
 }
 
-/* footer背景 */
-/* .section__wrapper__inner::before {
-  position: absolute;
-  content: "";
-  background: url(img/bg-img6.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  bottom: -150px;
-  left: 0;
-  width: 100%;
-  height: 1000px;
-} */
-
-.section02 {
-}
+.section02 {}
 
 .section02__inner {
   width: 90%;
@@ -356,7 +340,7 @@ img {
 
 .en-title {
   width: 50%;
-  margin: 0px auto 24px;
+  margin: 0 auto 24px;
 }
 
 .sub-title {
@@ -373,7 +357,7 @@ img {
 }
 
 .movie__box img {
-  aspect-ratio: 394/234;
+  aspect-ratio: 394 / 234;
   object-fit: cover;
 }
 
@@ -422,7 +406,7 @@ img {
 }
 
 .img-title-img__img img {
-  aspect-ratio: 196/230;
+  aspect-ratio: 196 / 230;
   object-fit: cover;
 }
 
@@ -440,9 +424,10 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.img-title-img__text img {
+.img-title-img__text-box > img {
   width: 250px;
 }
+
 
 .img-title-img__icon-title {
   display: block;
@@ -453,10 +438,19 @@ img {
   position: absolute;
   font-size: 21px;
 }
-.img-title-img__icon-title img {
+.img-title-img__icon-title > img {
   position: relative;
-  width: 210px;
-  height: 195px;
+  width: 180px;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .img-title-img__icon-title > img {
+    position: relative;
+    width: 100px;
+    height: auto;
+  }
+
 }
 
 .icon-title03 {
@@ -482,8 +476,7 @@ img {
   margin-right: auto;
 }
 
-.section03 {
-}
+.section03 {}
 
 .img-title-img__icon-title span {
   font-size: 64px;
@@ -495,7 +488,7 @@ img {
 }
 
 .section03__bg-img01 {
-  background-image: url({{ 'JIAS-img1.jpg' | asset_url }});
+  background-image: url('{{ 'JIAS-img1.jpg' | asset_url }}');
   background-position: center;
   background-size: cover;
   width: 80%;
@@ -505,7 +498,7 @@ img {
 }
 
 .section03__bg-img02 {
-  background-image: url({{ 'JIAS-img10.jpg' | asset_url }});
+  background-image: url('{{ 'JIAS-img10.jpg' | asset_url }}');
   background-position: center;
   background-size: cover;
   width: 80%;
@@ -515,7 +508,7 @@ img {
 }
 
 .section03__bg-img03 {
-  background-image: url({{ 'JIAS-img5.jpg' | asset_url }});
+  background-image: url('{{ 'JIAS-img5.jpg' | asset_url }}');
   background-position: center;
   background-size: cover;
   width: 80%;
@@ -526,17 +519,17 @@ img {
 .position-1 img {
   position: relative;
   top: -15px;
-  left: 0px;
+  left: 0;
 }
 .position-2 img {
   position: relative;
-  top: 0px;
-  left: -15px;
+  top: 0;
+  left: -8px;
 }
 .position-3 img {
-    position: relative;
-    top: 10px;
-    left: -5px;
+  position: relative;
+  top: 10px;
+  left: 0;
 }
 .icon-title03 div {
   font-size: 42px;
@@ -551,7 +544,7 @@ img {
   position: absolute;
   content: "";
   z-index: -1;
-  background: url({{ 'bg-img6.png' | asset_url }});
+  background: url('{{ 'bg-img6.png' | asset_url }}');
   width: 100%;
   height: 700px;
   background-position: center;
@@ -559,55 +552,6 @@ img {
   bottom: 0;
   left: 0;
 }
-/* .common-button--reservation {
-  position: absolute;
-  top: calc(50% + 250px);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  margin: 0 auto;
-  padding: 0.9em 2em;
-  border: none;
-  border-radius: 35px;
-  color: #000000;
-  font-weight: 600;
-  font-size: 1.2em;
-  display: flex;
-  flex-direction: column;
-  font-family: "canada-type-gibson", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  transition: all 0.6s;
-}
-.common-button--reservation:hover {
-  color: #8f8e8e;
-}
-
-.common-button--reservation span {
-  display: block;
-  font-size: 18px;
-  font-family: "fot-tsukumin-pr6n", sans-serif;
-  font-style: normal;
-  line-height: 2;
-}
-
-.common-button--reservation::after {
-  position: absolute;
-  content: "";
-  background: url(img/title-bg-ring6.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 250px;
-  z-index: -1;
-} */
-
 .section03__bg-img01__wrapper,
 .section03__bg-img02__wrapper,
 .section03__bg-img03__wrapper {
@@ -629,7 +573,24 @@ img {
   z-index: -1;
 }
 
+.icon-title02 img {
+  position: relative;
+  left: 10px;
+}
+
+
 @media screen and (max-width: 768px) {
+
+  .img-title-img__text-box > img {
+    width: 135px;
+  }
+
+  .icon-title02 > img {
+    position: relative;
+    top: 3px;
+    left: -2px;
+  }
+
   .section01 {
     padding-bottom: 80px;
     position: relative;
@@ -651,7 +612,7 @@ img {
 
   .en-title {
     width: 70%;
-    margin: 0px auto 24px;
+    margin: 0 auto 24px;
   }
 
   .text__box {
@@ -672,7 +633,7 @@ img {
   .section02__inner img {
     width: 70%;
     margin-bottom: 24px;
-}
+  }
   .section02__inner p {
     font-size: 12px;
   }
@@ -694,7 +655,7 @@ img {
   }
 
   .img-title-img__img img {
-    aspect-ratio: 2/4.2;
+    aspect-ratio: 2 / 4.2;
     object-fit: cover;
   }
   .position-left img {
@@ -714,7 +675,7 @@ img {
     font-size: 28px;
   }
   .img-title-img__text img {
-    width: 125px;
+    width: 100;
     position: relative;
     top: -10px;
   }
@@ -723,11 +684,7 @@ img {
     position: relative;
     top: -5px;
   }
-  .position-2 img {
-    position: relative;
-    top: 3px;
-    left: -7px;
-}
+
   .position-3 img {
     position: relative;
     top: 5px;
@@ -765,16 +722,15 @@ img {
   }
   .section03__bg-img01__wrapper,
   .section03__bg-img02__wrapper {
-    padding: 64px 0 64px;
+    padding: 64px 0;
   }
   .section03__bg-img03__wrapper {
     padding: 64px 0 100px;
   }
   .common-button {
     width: 200px;
-    margin: 0 auto;
+    margin: 0 auto 12px;
     font-size: 18px;
-    margin-bottom: 12px;
   }
   .common-button--bg-black {
     width: 200px;
@@ -785,11 +741,11 @@ img {
     top: calc(50% + 150px);
   }
   .section__wrapper__inner::before {
-    bottom: 0px;
+    bottom: 0;
     height: 700px;
   }
   .img-with-text__img img {
-    aspect-ratio: 242/ 238;
+    aspect-ratio: 242 / 238;
   }
 
   .FV-section__wrapper::before {
@@ -808,7 +764,7 @@ img {
     position: absolute;
     content: "";
     z-index: -1;
-    background: url({{ 'bg-img6.png' | asset_url }});
+    background: url('{{ 'bg-img6.png' | asset_url }}');
     width: 100%;
     height: 500px;
     background-position: center;
@@ -827,7 +783,7 @@ img {
   }
 
   .FV__logo-img {
-    margin: 32px auto 32px;
+    margin: 32px auto;
   }
 }
 
@@ -869,14 +825,14 @@ img {
         <div class="text__box">
           <p class="mb-62">感覚的に、心が動くもの。</p>
           <p class="mb-62">
-            高い技術力で生み出されるファブリックはアートと<br>
-            なるような存在で、はっとする大胆さや儚いほどの<br>
-            繊細さをもち、その時々に豊かな表情をのぞかせます。<br>
-            国内外屈指の高級メーカーと取り組み、<br>
+            高い技術力で生み出されるファブリックはアートと<br class="sp">
+            なるような存在で、はっとする大胆さや儚いほどの<br class="sp">
+            繊細さをもち、その時々に豊かな表情をのぞかせます。<br class="sp">
+            国内外屈指の高級メーカーと取り組み、<br class="sp">
             世界中の逸品を揃えた自慢のコレクション
           </p>
           <p>
-            何気ない日常が、特別なひとときに変わる瞬間を<br>
+            何気ない日常が、特別なひとときに変わる瞬間を<br class="sp">
             ジアスがお届けします。
           </p>
         </div>
@@ -895,14 +851,13 @@ img {
           <div class="en-title js__fade-in02">
             <img src="{{ 'title.png' | asset_url }}" alt="" />
           </div>
-         
+
           <p class="sub-title">
             ふり返ったり、前を向いたり。<br/>
             あたらしいあなたに会いに行こう。
           </p>
           <div class="movie">
             <div class="movie__box">
-              <!-- <img src="img/JIAS-img1.jpg" alt="" /> -->
               <div style="padding: 56.25% 0 0 0; position: relative">
                 <iframe
                   src="https://player.vimeo.com/video/878128881?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479"
@@ -948,8 +903,7 @@ img {
           <div class="img-title-img__text position-1">
             <div class="img-title-img__text-box">
               <span class="img-title-img__icon-title js__fade-in03">
-                Phase of <br/>
-                <span>Float</span>
+                <img src="{{ 'category_name_sozai_float.png' | asset_url }}" alt="">
               </span>
               <img src="{{ 'title_bg-ring2.png' | asset_url }}" alt="">
             </div>
@@ -985,8 +939,7 @@ img {
           <div class="img-title-img__text position-2">
             <div class="img-title-img__text-box">
               <span class="img-title-img__icon-title icon-title02 js__fade-in04">
-                Phase of <br/>
-                <span>Chaos</span>
+                <img src="{{ 'category_name_sozai_chaos.png' | asset_url }}" alt="">
               </span>
               <img src="{{ 'title_bg-ring3.png' | asset_url }}" alt="">
             </div>
@@ -1011,7 +964,6 @@ img {
           </figure>
         </div>
 
-      <!-- <div class="section03__bg-img02"></div> -->
       </section>
 
       <section class="section03">
@@ -1024,8 +976,7 @@ img {
           <div class="img-title-img__text position-3">
             <div class="img-title-img__text-box">
               <span class="img-title-img__icon-title icon-title03 js__fade-in05">
-                Phase of <br/>
-                <div class="small-font">Unknown</div>
+                <img src="{{ 'category_name_sozai_unk.png' | asset_url }}" alt="" />
               </span>
               <img src="{{ 'title_bg-ring4.png' | asset_url }}" alt="">
             </div>
@@ -1050,7 +1001,6 @@ img {
           </figure>
         </div>
 
-        <!-- <div class="section03__bg-img03"></div> -->
         <a href="https://jias-net.jp/collections/jiastexpremium3" class="common-button mb-12">Check the Item</a>
         <a href="https://jias.meclib.jp/JIASTEX_PREMIUM_Vol3/book/index.html" class="common-button--bg-black">Catalog</a>
       </section>
@@ -1063,9 +1013,3 @@ img {
     </div>
   </div>
 </div>
-
-
-{% comment %} <script src="https://player.vimeo.com/api/player.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-        <script src="script.js"></script> {% endcomment %}
