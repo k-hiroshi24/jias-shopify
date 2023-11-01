@@ -331,8 +331,6 @@
         "9d4e0202-fdf4-435c-9605-2f7c2b639940": {
           "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
-            "heading_size": 24,
-            "feed_width": 100,
             "html_area": "<style>\n#insta-feed h2{font-family: Goudy Old Style,\"YakuHanMP, Noto Serif JP\",serif;\nfont-size: 2em;}\n<\/style>"
           }
         }
@@ -895,7 +893,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify:\/\/shop_images\/logo-kundalini.jpg",
-            "link": "shopify:\/\/collections\/kundalini",
+            "link": "shopify:\/\/collections\/kdln",
             "link_blank": false
           }
         },

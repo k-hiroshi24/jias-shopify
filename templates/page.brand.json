@@ -255,7 +255,7 @@
           "settings": {
             "block_url": "",
             "blank_url": false,
-            "collection": "kundalini",
+            "collection": "kdln",
             "image": "shopify:\/\/shop_images\/page-brand-kundalini.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
