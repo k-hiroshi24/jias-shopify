@@ -1,9 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "page",
-      "settings": {
-      }
+      "settings": {}
     },
     "1650594009a9ffd9fb": {
       "type": "dynamic-collection-list",
@@ -14,7 +22,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "carpe-diem",
-            "image": "shopify:\/\/shop_images\/page-brand-carpe-diem.jpg",
+            "image": "shopify://shop_images/page-brand-carpe-diem.jpg",
             "title": "",
             "description": ""
           }
@@ -25,7 +33,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "jias-heralbony",
-            "image": "shopify:\/\/shop_images\/index-logo-jiasxheralbony.png",
+            "image": "shopify://shop_images/index-logo-jiasxheralbony.png",
             "title": "JIAS ONLINE × ヘラルボニー",
             "description": "ジアスオンライン× ヘラルボニー"
           }
@@ -36,7 +44,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "eco-de-happiness",
-            "image": "shopify:\/\/shop_images\/page-brand-eco-de-happiness.png",
+            "image": "shopify://shop_images/page-brand-eco-de-happiness.png",
             "title": "",
             "description": ""
           }
@@ -47,7 +55,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "nagano-interior",
-            "image": "shopify:\/\/shop_images\/nagano-brand-logo-area.jpg",
+            "image": "shopify://shop_images/nagano-brand-logo-area.jpg",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -58,7 +66,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "hidasangyou",
-            "image": "shopify:\/\/shop_images\/page-brand-hida.png",
+            "image": "shopify://shop_images/page-brand-hida.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -69,7 +77,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "ayano",
-            "image": "shopify:\/\/shop_images\/page-brand-ayano.png",
+            "image": "shopify://shop_images/page-brand-ayano.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -80,7 +88,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "tsukubasansho",
-            "image": "shopify:\/\/shop_images\/page-brand-tsukubasansho.png",
+            "image": "shopify://shop_images/page-brand-tsukubasansho.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -91,7 +99,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "estic",
-            "image": "shopify:\/\/shop_images\/page-brand-estic.png",
+            "image": "shopify://shop_images/page-brand-estic.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -102,7 +110,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "shirakawa",
-            "image": "shopify:\/\/shop_images\/page-brand-shirakawa.png",
+            "image": "shopify://shop_images/page-brand-shirakawa.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -113,7 +121,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "brian-kirk",
-            "image": "shopify:\/\/shop_images\/page-brand-briankirk.png",
+            "image": "shopify://shop_images/page-brand-briankirk.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -124,7 +132,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "core-one-1",
-            "image": "shopify:\/\/shop_images\/page-brand-coreone.png",
+            "image": "shopify://shop_images/page-brand-coreone.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -135,7 +143,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "cuero",
-            "image": "shopify:\/\/shop_images\/page-brand-cuero.png",
+            "image": "shopify://shop_images/page-brand-cuero.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -146,7 +154,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "daro",
-            "image": "shopify:\/\/shop_images\/page-brand-daro.png",
+            "image": "shopify://shop_images/page-brand-daro.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -157,7 +165,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "david-trubridge",
-            "image": "shopify:\/\/shop_images\/page-brand-david_rubridge.png",
+            "image": "shopify://shop_images/page-brand-david_rubridge.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -168,7 +176,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "dcw-editions",
-            "image": "shopify:\/\/shop_images\/page-brand-dcw.png",
+            "image": "shopify://shop_images/page-brand-dcw.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -179,7 +187,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "eva-solo",
-            "image": "shopify:\/\/shop_images\/page-brand-evasolo.png",
+            "image": "shopify://shop_images/page-brand-evasolo.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -190,7 +198,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "fabas",
-            "image": "shopify:\/\/shop_images\/page-brand-fabas.png",
+            "image": "shopify://shop_images/page-brand-fabas.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -201,7 +209,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "forestier",
-            "image": "shopify:\/\/shop_images\/page-brand-forestier.png",
+            "image": "shopify://shop_images/page-brand-forestier.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -212,7 +220,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "graypants",
-            "image": "shopify:\/\/shop_images\/page-brand-graypants.png",
+            "image": "shopify://shop_images/page-brand-graypants.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -223,7 +231,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "herman-miller",
-            "image": "shopify:\/\/shop_images\/page-brand-herman_miller.png",
+            "image": "shopify://shop_images/page-brand-herman_miller.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -234,7 +242,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "house-doctor",
-            "image": "shopify:\/\/shop_images\/index-logo-housedoctor.jpg",
+            "image": "shopify://shop_images/index-logo-housedoctor.jpg",
             "title": "house doctor",
             "description": "ハウスドクター"
           }
@@ -245,7 +253,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "ichendorf-milano",
-            "image": "shopify:\/\/shop_images\/page-brand-ichendorf-milano_437x183_a4dee250-bbec-4939-ac91-2f9c512569c0.png",
+            "image": "shopify://shop_images/page-brand-ichendorf-milano_437x183_a4dee250-bbec-4939-ac91-2f9c512569c0.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -256,7 +264,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "kdln",
-            "image": "shopify:\/\/shop_images\/page-brand-kundalini.png",
+            "image": "shopify://shop_images/page-brand-kundalini.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -267,7 +275,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "le-klint",
-            "image": "shopify:\/\/shop_images\/page-brand-leklint.png",
+            "image": "shopify://shop_images/page-brand-leklint.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -278,7 +286,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "made-by-hand",
-            "image": "shopify:\/\/shop_images\/page-brand-made_by_hand.png",
+            "image": "shopify://shop_images/page-brand-made_by_hand.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -289,7 +297,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "new-works",
-            "image": "shopify:\/\/shop_images\/page-brand-new_works.png",
+            "image": "shopify://shop_images/page-brand-new_works.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -300,7 +308,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "nofu",
-            "image": "shopify:\/\/shop_images\/page-brand-nofu.png",
+            "image": "shopify://shop_images/page-brand-nofu.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -311,7 +319,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "norrmade",
-            "image": "shopify:\/\/shop_images\/page-brand-norrmade.png",
+            "image": "shopify://shop_images/page-brand-norrmade.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -322,7 +330,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "original-btc-england",
-            "image": "shopify:\/\/shop_images\/page-brand-btc.png",
+            "image": "shopify://shop_images/page-brand-btc.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -333,7 +341,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "piet-hein",
-            "image": "shopify:\/\/shop_images\/page-brand-piet_hein.png",
+            "image": "shopify://shop_images/page-brand-piet_hein.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -344,7 +352,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "pols-potten",
-            "image": "shopify:\/\/shop_images\/page-brand-pols-potten.png",
+            "image": "shopify://shop_images/page-brand-pols-potten.png",
             "title": "",
             "description": ""
           }
@@ -355,7 +363,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "resident",
-            "image": "shopify:\/\/shop_images\/page-brand-resident.png",
+            "image": "shopify://shop_images/page-brand-resident.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -365,8 +373,8 @@
           "settings": {
             "block_url": "",
             "blank_url": false,
-            "collection": "showroom-finland",
-            "image": "shopify:\/\/shop_images\/page-brand-showroom.png",
+            "collection": "pilke",
+            "image": "shopify://shop_images/page-brand-showroom.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -377,7 +385,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "spring-valley",
-            "image": "shopify:\/\/shop_images\/page-brand-spring-valley.jpg",
+            "image": "shopify://shop_images/page-brand-spring-valley.jpg",
             "title": "",
             "description": ""
           }
@@ -388,7 +396,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "tato",
-            "image": "shopify:\/\/shop_images\/page-brand-tato.png",
+            "image": "shopify://shop_images/page-brand-tato.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -399,7 +407,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "tom-dixon",
-            "image": "shopify:\/\/shop_images\/page-brand-tom_dxson.png",
+            "image": "shopify://shop_images/page-brand-tom_dxson.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -410,7 +418,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "tom-rossau",
-            "image": "shopify:\/\/shop_images\/page-brand-tomrossau.png",
+            "image": "shopify://shop_images/page-brand-tomrossau.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -421,7 +429,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "werner",
-            "image": "shopify:\/\/shop_images\/page-brand-werner.png",
+            "image": "shopify://shop_images/page-brand-werner.png",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }
@@ -432,7 +440,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "zafferano",
-            "image": "shopify:\/\/shop_images\/zafferano-brand-logo-area.jpg",
+            "image": "shopify://shop_images/zafferano-brand-logo-area.jpg",
             "title": "",
             "description": "{{ block.settings.collection.metafields.my_fields._kana.value }}"
           }

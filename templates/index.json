@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "21c14fe8-41a8-4538-acb7-76aad3f4abf1": {
@@ -26,9 +35,9 @@
       ],
       "settings": {
         "title": "",
-        "image": "shopify:\/\/shop_images\/hd_aw23_risskov_50_cw.jpg",
+        "image": "shopify://shop_images/hd_aw23_risskov_50_cw.jpg",
         "image_width": "full",
-        "link_text": "https:\/\/jias-net.jp\/collections\/house-doctor",
+        "link_text": "https://jias-net.jp/collections/house-doctor",
         "textbox_title": "",
         "textbox_subheading": "",
         "textbox_button_label": "",
@@ -44,25 +53,25 @@
         "template--15955815203010__415a064b-eae8-413b-bbbb-a0f8095d0a08-16742043444d85a965-0": {
           "type": "testimonial",
           "settings": {
-            "image": "shopify:\/\/shop_images\/top_carpe_banner02.png",
+            "image": "shopify://shop_images/top_carpe_banner02.png",
             "text": "JIAS ONLINE限定ブランド「Carpe Diem」<br>～走り書きのような日々に、ときめきと上質なひと呼吸を。～",
-            "url": "shopify:\/\/collections\/carpe-diem"
+            "url": "shopify://collections/carpe-diem"
           }
         },
         "template--15955815203010__415a064b-eae8-413b-bbbb-a0f8095d0a08-16742043444d85a965-1": {
           "type": "testimonial",
           "settings": {
-            "image": "shopify:\/\/shop_images\/top_ecoH_banner02.png",
+            "image": "shopify://shop_images/top_ecoH_banner02.png",
             "text": "機能性とデザイン性を両立させたカーテン<br>ファブリックシリーズ「Eco de Happiness」",
-            "url": "shopify:\/\/collections\/eco-de-happiness"
+            "url": "shopify://collections/eco-de-happiness"
           }
         },
         "template--15955815203010__415a064b-eae8-413b-bbbb-a0f8095d0a08-16742043444d85a965-2": {
           "type": "testimonial",
           "settings": {
-            "image": "shopify:\/\/shop_images\/top_heral_banner02.png",
+            "image": "shopify://shop_images/top_heral_banner02.png",
             "text": "ヘラルボニーのアートとジアスの想いをこだわりをファブリックにのせて",
-            "url": "shopify:\/\/collections\/jias-heralbony"
+            "url": "shopify://collections/jias-heralbony"
           }
         }
       },
@@ -83,10 +92,10 @@
           "type": "collection",
           "disabled": true,
           "settings": {
-            "block_url": "shopify:\/\/collections\/zafferano",
+            "block_url": "shopify://collections/zafferano",
             "blank_url": false,
             "collection": "zafferano",
-            "image": "shopify:\/\/shop_images\/TOP_1_75402678-3000-400e-941b-4adff47c14f8.png",
+            "image": "shopify://shop_images/TOP_1_75402678-3000-400e-941b-4adff47c14f8.png",
             "title": "Zafferano",
             "description": "海外でも人気のポータブルライトを新入荷しました！"
           }
@@ -94,10 +103,10 @@
         "template--15955815203010__de444913-a09e-4b95-883e-b0da54fd4af4-167530073238c8b7cc-0": {
           "type": "collection",
           "settings": {
-            "block_url": "https:\/\/jias-net.jp\/pages\/carpe-diem",
+            "block_url": "https://jias-net.jp/pages/carpe-diem",
             "blank_url": false,
             "collection": "carpe-diem",
-            "image": "shopify:\/\/shop_images\/top_carpe_banner02.png",
+            "image": "shopify://shop_images/top_carpe_banner02.png",
             "title": "",
             "description": "ジアス限定ブランド「Carpe Diem」～走り書きのような日々に、ときめきと上質なひと呼吸を。～"
           }
@@ -109,7 +118,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "spring-valley",
-            "image": "shopify:\/\/shop_images\/SPRING_VALLEY_bb634127-4f27-4bcc-8bfe-c9a126574b84.png",
+            "image": "shopify://shop_images/SPRING_VALLEY_bb634127-4f27-4bcc-8bfe-c9a126574b84.png",
             "title": "SPRING VALLEY",
             "description": "店舗でも人気の商品を追加しました"
           }
@@ -121,7 +130,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "flower-vase",
-            "image": "shopify:\/\/shop_images\/Minimalistic_Light_Flower_Banner_Photo_Collage_4.png",
+            "image": "shopify://shop_images/Minimalistic_Light_Flower_Banner_Photo_Collage_4.png",
             "title": "春の訪れをフラワーベースとともに",
             "description": "バイヤーおすすめのフラワーベースを集めました"
           }
@@ -129,10 +138,10 @@
         "template--15955815203010__de444913-a09e-4b95-883e-b0da54fd4af4-167530073238c8b7cc-1": {
           "type": "collection",
           "settings": {
-            "block_url": "https:\/\/jias-net.jp\/pages\/eco-de-happiness",
+            "block_url": "https://jias-net.jp/pages/eco-de-happiness",
             "blank_url": false,
             "collection": "eco-de-happiness",
-            "image": "shopify:\/\/shop_images\/top_ecoH_banner02.png",
+            "image": "shopify://shop_images/top_ecoH_banner02.png",
             "title": "",
             "description": "機能性とデザイン性を両立させたカーテンファブリックシリーズ「Eco de Happiness」"
           }
@@ -141,10 +150,10 @@
           "type": "collection",
           "disabled": true,
           "settings": {
-            "block_url": "shopify:\/\/collections\/pols-potten",
+            "block_url": "shopify://collections/pols-potten",
             "blank_url": false,
             "collection": "pols-potten",
-            "image": "shopify:\/\/shop_images\/Minimalistic_Light_Flower_Banner_Photo_Collage_2.png",
+            "image": "shopify://shop_images/Minimalistic_Light_Flower_Banner_Photo_Collage_2.png",
             "title": "POLSPOTTEN",
             "description": "春の陽気とともにワクワクするようなダッチデザインが魅力的なアイテムたちが登場"
           }
@@ -152,10 +161,10 @@
         "template--15955815203010__de444913-a09e-4b95-883e-b0da54fd4af4-167530073238c8b7cc-2": {
           "type": "collection",
           "settings": {
-            "block_url": "https:\/\/jias-net.jp\/pages\/heralbony-jias",
+            "block_url": "https://jias-net.jp/pages/heralbony-jias",
             "blank_url": false,
             "collection": "jias-heralbony",
-            "image": "shopify:\/\/shop_images\/top_heral_banner02.png",
+            "image": "shopify://shop_images/top_heral_banner02.png",
             "title": "",
             "description": "ヘラルボニーのアートとジアスの想いをこだわりをファブリックにのせて"
           }
@@ -163,10 +172,10 @@
         "49a5f798-cb5b-4f4c-a9c4-caa4cac852bb": {
           "type": "collection",
           "settings": {
-            "block_url": "shopify:\/\/collections\/nagano-interior",
+            "block_url": "shopify://collections/nagano-interior",
             "blank_url": false,
             "collection": "nagano-interior",
-            "image": "shopify:\/\/shop_images\/NEW_ARRAIVAL.png",
+            "image": "shopify://shop_images/NEW_ARRAIVAL.png",
             "title": "ナガノインテリア",
             "description": "店舗でも人気のブランドを追加しました"
           }
@@ -232,12 +241,12 @@
         "1e892b1c-b737-4989-912c-3e2326bf144f": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/coordinate-ichendorf-milano.jpg",
+            "image": "shopify://shop_images/coordinate-ichendorf-milano.jpg",
             "background_position": "center-center",
             "title": "",
             "text": "",
             "color": "#4d4d4d",
-            "block_link": "shopify:\/\/collections\/ichendorf-milano",
+            "block_link": "shopify://collections/ichendorf-milano",
             "button_text": "ICHENDORF MILANO",
             "button_style": "primary",
             "show_overlay": false,
@@ -248,12 +257,12 @@
         "09c40fac-8ba7-4cfc-bdbb-e79314191066": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1_6a35318f-c10c-4670-bbbd-3b89021f124e.png",
+            "image": "shopify://shop_images/1_6a35318f-c10c-4670-bbbd-3b89021f124e.png",
             "background_position": "center-center",
             "title": "",
             "text": "",
             "color": "#4d4d4d",
-            "block_link": "shopify:\/\/collections\/zafferano",
+            "block_link": "shopify://collections/zafferano",
             "button_text": "Zafferano",
             "button_style": "primary",
             "show_overlay": false,
@@ -264,12 +273,12 @@
         "7908bb0a-9887-4843-a897-410547ce0edc": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2_30877b4e-3490-4aad-8be1-2bf067ac0e2a.png",
+            "image": "shopify://shop_images/2_30877b4e-3490-4aad-8be1-2bf067ac0e2a.png",
             "background_position": "center-center",
             "title": "",
             "text": "",
             "color": "#4d4d4d",
-            "block_link": "shopify:\/\/collections\/pols-potten",
+            "block_link": "shopify://collections/pols-potten",
             "button_text": "POLSPOTTEN",
             "button_style": "primary",
             "show_overlay": false,
@@ -314,9 +323,7 @@
     },
     "410ecd2c-a034-486a-9b1e-bafb5fa6fd46": {
       "type": "dynamic-promo-grid-blog-posts",
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "title": "TOPICS",
         "blog": "topics",
@@ -329,9 +336,9 @@
       "type": "apps",
       "blocks": {
         "9d4e0202-fdf4-435c-9605-2f7c2b639940": {
-          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
-            "html_area": "<style>\n#insta-feed h2{font-family: Goudy Old Style,\"YakuHanMP, Noto Serif JP\",serif;\nfont-size: 2em;}\n<\/style>"
+            "html_area": "<style>\n#insta-feed h2{font-family: Goudy Old Style,\"YakuHanMP, Noto Serif JP\",serif;\nfont-size: 2em;}\n</style>"
           }
         }
       },
@@ -384,15 +391,15 @@
       "type": "pxs-image-with-text-overlay",
       "settings": {
         "section_height": "medium",
-        "image": "shopify:\/\/shop_images\/bnr-about-jias-02_32ac3e6c-d3f3-4434-8ba8-5a34bfb960ff.jpg",
+        "image": "shopify://shop_images/bnr-about-jias-02_32ac3e6c-d3f3-4434-8ba8-5a34bfb960ff.jpg",
         "position": "center center",
         "title": "",
-        "text": "<p><\/p>",
+        "text": "<p></p>",
         "content_position": "center-center",
         "color": "#ffffff",
         "overlay_background": "#000000",
         "overlay_opacity": 0,
-        "link": "shopify:\/\/pages\/about",
+        "link": "shopify://pages/about",
         "button_text": ""
       }
     },
@@ -402,11 +409,11 @@
         "promotion-1": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/shine-living.jpg",
+            "image": "shopify://shop_images/shine-living.jpg",
             "title": "",
             "text": "",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/collections\/living-tag",
+            "block_link": "shopify://collections/living-tag",
             "button_text": "リビング",
             "button_style": "primary",
             "show_overlay": false,
@@ -417,11 +424,11 @@
         "promotion-2": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/shine-dining-02.jpg",
+            "image": "shopify://shop_images/shine-dining-02.jpg",
             "title": "",
             "text": "",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/collections\/dining",
+            "block_link": "shopify://collections/dining",
             "button_text": "ダイニング",
             "button_style": "primary",
             "show_overlay": true,
@@ -433,11 +440,11 @@
           "type": "promotion",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/shine-kidsroom.jpg",
+            "image": "shopify://shop_images/shine-kidsroom.jpg",
             "title": "",
             "text": "",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/collections\/kids-room",
+            "block_link": "shopify://collections/kids-room",
             "button_text": "子供部屋・キッズルーム",
             "button_style": "primary",
             "show_overlay": true,
@@ -448,11 +455,11 @@
         "promotion-4": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/shine-bedroom.jpg",
+            "image": "shopify://shop_images/shine-bedroom.jpg",
             "title": "",
             "text": "",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/collections\/bedroom",
+            "block_link": "shopify://collections/bedroom",
             "button_text": "寝室・ベッドルーム",
             "button_style": "primary",
             "show_overlay": false,
@@ -482,7 +489,7 @@
         "a047f965-0ba3-4f5f-80d7-8584f7d29c11": {
           "type": "view_all_card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/tom_dixon480.jpg",
+            "image": "shopify://shop_images/tom_dixon480.jpg",
             "text_alignment": "center-center",
             "pre_heading": "view more",
             "heading": "Illumination",
@@ -511,7 +518,7 @@
         "view-all-card": {
           "type": "view_all_card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/collection_chair-750.jpg",
+            "image": "shopify://shop_images/collection_chair-750.jpg",
             "text_alignment": "center-center",
             "pre_heading": "view more",
             "heading": "Table",
@@ -540,7 +547,7 @@
         "08857fff-6234-43a9-8c47-fdba8fb055bf": {
           "type": "view_all_card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/collection_sofa500.jpg",
+            "image": "shopify://shop_images/collection_sofa500.jpg",
             "text_alignment": "center-center",
             "pre_heading": "view more",
             "heading": "Sofa",
@@ -572,7 +579,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "natural",
-            "image": "shopify:\/\/shop_images\/bnr-taste-natural.jpg",
+            "image": "shopify://shop_images/bnr-taste-natural.jpg",
             "title": "",
             "description": ""
           }
@@ -583,7 +590,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "scandinavian",
-            "image": "shopify:\/\/shop_images\/bnr-taste-nordic-01_84980a07-e76d-4088-a77e-6857c5f57c01.jpg",
+            "image": "shopify://shop_images/bnr-taste-nordic-01_84980a07-e76d-4088-a77e-6857c5f57c01.jpg",
             "title": "",
             "description": ""
           }
@@ -594,7 +601,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "modern",
-            "image": "shopify:\/\/shop_images\/bnr-taste-modern.jpg",
+            "image": "shopify://shop_images/bnr-taste-modern.jpg",
             "title": "",
             "description": ""
           }
@@ -605,7 +612,7 @@
             "block_url": "",
             "blank_url": false,
             "collection": "vintage",
-            "image": "shopify:\/\/shop_images\/bnr-taste-vintage_b4b4ab59-4ae1-460e-863b-dddc95089931.jpg",
+            "image": "shopify://shop_images/bnr-taste-vintage_b4b4ab59-4ae1-460e-863b-dddc95089931.jpg",
             "title": "",
             "description": ""
           }
@@ -636,7 +643,7 @@
         "f49a6ac6-4169-4e4e-89a2-4f26b4a5bc9c": {
           "type": "title_card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/features_cll-leklint.jpg",
+            "image": "shopify://shop_images/features_cll-leklint.jpg",
             "horizontal_size": "3",
             "vertical_size": "2",
             "text_alignment": "center-center",
@@ -668,7 +675,7 @@
         "2f78622d-e575-4d9b-8f79-a8aaeee5a2a9": {
           "type": "title_card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/features_coll-hida.jpg",
+            "image": "shopify://shop_images/features_coll-hida.jpg",
             "horizontal_size": "3",
             "vertical_size": "2",
             "text_alignment": "center-center",
@@ -700,7 +707,7 @@
         "b958ae55-a180-4838-a038-a4d9a63959a3": {
           "type": "title_card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/features_coll-tom_d.jpg",
+            "image": "shopify://shop_images/features_coll-tom_d.jpg",
             "horizontal_size": "3",
             "vertical_size": "2",
             "text_alignment": "center-center",
@@ -732,224 +739,224 @@
         "0f22e433-859f-4c6c-9f5b-1a082dcf620e": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-jiasxheralbony-320.png",
-            "link": "shopify:\/\/pages\/heralbony-jias",
+            "image": "shopify://shop_images/logo-jiasxheralbony-320.png",
+            "link": "shopify://pages/heralbony-jias",
             "link_blank": false
           }
         },
         "abf0d7ed-8f1c-4084-bf06-cec7e7ec59ad": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-eco-de-happiness.png",
-            "link": "shopify:\/\/collections\/eco-de-happiness",
+            "image": "shopify://shop_images/logo-eco-de-happiness.png",
+            "link": "shopify://collections/eco-de-happiness",
             "link_blank": false
           }
         },
         "1649663914b7de0482-0": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-hida.jpg",
-            "link": "shopify:\/\/collections\/hidasangyou",
+            "image": "shopify://shop_images/logo-hida.jpg",
+            "link": "shopify://collections/hidasangyou",
             "link_blank": false
           }
         },
         "1c6b2bd2-5179-4ae1-9729-8751ea5e2242": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-ayano_160x160_9a663f2f-8ba4-4d42-8779-12d87b53b3f2.png",
-            "link": "shopify:\/\/collections\/ayano",
+            "image": "shopify://shop_images/logo-ayano_160x160_9a663f2f-8ba4-4d42-8779-12d87b53b3f2.png",
+            "link": "shopify://collections/ayano",
             "link_blank": false
           }
         },
         "e0d6cecc-50ba-4929-9cb8-ce2f400a6152": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-tsukubasansho_160x160_750864e0-aa32-4d8e-9978-509c375004b2.png",
-            "link": "shopify:\/\/collections\/tsukubasansho",
+            "image": "shopify://shop_images/logo-tsukubasansho_160x160_750864e0-aa32-4d8e-9978-509c375004b2.png",
+            "link": "shopify://collections/tsukubasansho",
             "link_blank": false
           }
         },
         "1649663914b7de0482-1": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-estic_b28f2cc7-09f7-4812-9192-53c7b8c56ed8.jpg",
-            "link": "shopify:\/\/collections\/estic",
+            "image": "shopify://shop_images/logo-estic_b28f2cc7-09f7-4812-9192-53c7b8c56ed8.jpg",
+            "link": "shopify://collections/estic",
             "link_blank": false
           }
         },
         "56e9ae49-1494-4351-ae84-513995b1c2f6": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-shirakawa_160x160_76e16eae-20f1-4d47-8c07-31d701d3718e.png",
-            "link": "shopify:\/\/collections\/shirakawa",
+            "image": "shopify://shop_images/logo-shirakawa_160x160_76e16eae-20f1-4d47-8c07-31d701d3718e.png",
+            "link": "shopify://collections/shirakawa",
             "link_blank": false
           }
         },
         "1649663914b7de0482-2": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-briankirk_5d5aa062-3ccb-45dc-9c35-fce8907e6c69.jpg",
-            "link": "shopify:\/\/collections\/brian-kirk",
+            "image": "shopify://shop_images/logo-briankirk_5d5aa062-3ccb-45dc-9c35-fce8907e6c69.jpg",
+            "link": "shopify://collections/brian-kirk",
             "link_blank": false
           }
         },
         "1649663914b7de0482-3": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-core_one.jpg",
-            "link": "shopify:\/\/collections\/core-one-1",
+            "image": "shopify://shop_images/logo-core_one.jpg",
+            "link": "shopify://collections/core-one-1",
             "link_blank": false
           }
         },
         "2b17fe16-2414-48de-844e-de86b8e8888c": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-cuero.jpg",
-            "link": "shopify:\/\/collections\/cuero",
+            "image": "shopify://shop_images/logo-cuero.jpg",
+            "link": "shopify://collections/cuero",
             "link_blank": false
           }
         },
         "a67ff5ae-f568-49ef-9cd1-8fb314317fcc": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-daro.jpg",
-            "link": "shopify:\/\/collections\/daro",
+            "image": "shopify://shop_images/logo-daro.jpg",
+            "link": "shopify://collections/daro",
             "link_blank": false
           }
         },
         "0232b551-217a-43e6-b227-1e822c69ba79": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-david_trubridge.jpg",
-            "link": "shopify:\/\/collections\/david-trubridge",
+            "image": "shopify://shop_images/logo-david_trubridge.jpg",
+            "link": "shopify://collections/david-trubridge",
             "link_blank": false
           }
         },
         "32f5c3c4-6f8d-4b87-8c72-fb2474183738": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-dcw.jpg",
-            "link": "shopify:\/\/collections\/dcw-editions",
+            "image": "shopify://shop_images/logo-dcw.jpg",
+            "link": "shopify://collections/dcw-editions",
             "link_blank": false
           }
         },
         "7b3479ae-7486-4e5c-93cd-9ed93fe321ba": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-eva_solo.jpg",
-            "link": "shopify:\/\/collections\/eva-solo",
+            "image": "shopify://shop_images/logo-eva_solo.jpg",
+            "link": "shopify://collections/eva-solo",
             "link_blank": false
           }
         },
         "a3324b8e-f418-43c7-9d5c-225c0aff2c38": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-fabas.jpg",
-            "link": "shopify:\/\/collections\/fabas",
+            "image": "shopify://shop_images/logo-fabas.jpg",
+            "link": "shopify://collections/fabas",
             "link_blank": false
           }
         },
         "ceb91371-22d8-4fbc-a769-8202ed24c350": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-forestier.jpg",
-            "link": "shopify:\/\/collections\/forestier",
+            "image": "shopify://shop_images/logo-forestier.jpg",
+            "link": "shopify://collections/forestier",
             "link_blank": false
           }
         },
         "c7ebc6c2-d765-46ee-bce1-b59d177a7bc0": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-grypants.jpg",
-            "link": "shopify:\/\/collections\/graypants",
+            "image": "shopify://shop_images/logo-grypants.jpg",
+            "link": "shopify://collections/graypants",
             "link_blank": false
           }
         },
         "4e37305d-11e3-433f-a338-4b865263cd20": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-hermanmiller.jpg",
-            "link": "shopify:\/\/collections\/herman-miller",
+            "image": "shopify://shop_images/logo-hermanmiller.jpg",
+            "link": "shopify://collections/herman-miller",
             "link_blank": false
           }
         },
         "cb0257bb-3107-41f9-9ba6-76951e121343": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-housedoctor-320.jpg",
-            "link": "shopify:\/\/collections\/house-doctor",
+            "image": "shopify://shop_images/logo-housedoctor-320.jpg",
+            "link": "shopify://collections/house-doctor",
             "link_blank": false
           }
         },
         "bac2fe09-8f28-4ac3-aa64-44ece561f80c": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-tom_ichendorf-milano_160x160_55138944-e2a4-4208-8ff8-9fdc87c4375e.png",
-            "link": "shopify:\/\/collections\/ichendorf-milano",
+            "image": "shopify://shop_images/logo-tom_ichendorf-milano_160x160_55138944-e2a4-4208-8ff8-9fdc87c4375e.png",
+            "link": "shopify://collections/ichendorf-milano",
             "link_blank": false
           }
         },
         "d823e290-6c26-4cfa-b2db-7251ae39c45f": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-kundalini.jpg",
-            "link": "shopify:\/\/collections\/kdln",
+            "image": "shopify://shop_images/logo-kundalini.jpg",
+            "link": "shopify://collections/kdln",
             "link_blank": false
           }
         },
         "fa9739bc-d868-4352-a4ae-cb92c9fd32c6": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-le_klint-scandex.jpg",
-            "link": "shopify:\/\/collections\/le-klint",
+            "image": "shopify://shop_images/logo-le_klint-scandex.jpg",
+            "link": "shopify://collections/le-klint",
             "link_blank": false
           }
         },
         "f3cf3c44-9032-4683-90d1-1e5ac62f4425": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-made_by_hand.jpg",
-            "link": "shopify:\/\/collections\/made-by-hand",
+            "image": "shopify://shop_images/logo-made_by_hand.jpg",
+            "link": "shopify://collections/made-by-hand",
             "link_blank": false
           }
         },
         "ce016560-29c0-4438-b7f9-a8d25bac1637": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-new_works.jpg",
-            "link": "shopify:\/\/collections\/new-works",
+            "image": "shopify://shop_images/logo-new_works.jpg",
+            "link": "shopify://collections/new-works",
             "link_blank": false
           }
         },
         "b37932e3-5ed1-4d68-9150-27eb9811cd03": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-nofu.jpg",
-            "link": "shopify:\/\/collections\/nofu",
+            "image": "shopify://shop_images/logo-nofu.jpg",
+            "link": "shopify://collections/nofu",
             "link_blank": false
           }
         },
         "ff5ed34c-e0b6-4507-add9-6e1a4ec7e1c2": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-norrmade.jpg",
-            "link": "shopify:\/\/collections\/norrmade",
+            "image": "shopify://shop_images/logo-norrmade.jpg",
+            "link": "shopify://collections/norrmade",
             "link_blank": false
           }
         },
         "ecee8a1e-8fcf-4d2d-a6d4-a9d141c00aea": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-btc.jpg",
-            "link": "shopify:\/\/collections\/original-btc-england",
+            "image": "shopify://shop_images/logo-btc.jpg",
+            "link": "shopify://collections/original-btc-england",
             "link_blank": false
           }
         },
         "399d70b8-1052-41c8-be89-aaf0e884ec06": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-piet_hein.jpg",
-            "link": "shopify:\/\/collections\/piet-hein",
+            "image": "shopify://shop_images/logo-piet_hein.jpg",
+            "link": "shopify://collections/piet-hein",
             "link_blank": false
           }
         },
@@ -957,7 +964,7 @@
           "type": "logo",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-pols-potten.png",
+            "image": "shopify://shop_images/logo-pols-potten.png",
             "link": "",
             "link_blank": false
           }
@@ -965,56 +972,56 @@
         "7a0a67fc-4d48-4c6d-a836-cb3f347a3095": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-resident.jpg",
-            "link": "shopify:\/\/collections\/resident",
+            "image": "shopify://shop_images/logo-resident.jpg",
+            "link": "shopify://collections/resident",
             "link_blank": false
           }
         },
         "742a29cb-a2ef-4afe-8aa0-939ebac196ab": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-showroom.jpg",
-            "link": "shopify:\/\/collections\/showroom-finland",
+            "image": "shopify://shop_images/logo-showroom.jpg",
+            "link": "shopify://collections/pilke",
             "link_blank": false
           }
         },
         "d0c2efc4-d088-48f6-b179-cc56b3f6fa65": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo_spring-valley.png",
-            "link": "shopify:\/\/collections\/spring-valley",
+            "image": "shopify://shop_images/logo_spring-valley.png",
+            "link": "shopify://collections/spring-valley",
             "link_blank": false
           }
         },
         "82b13ec1-e797-482c-af8d-368602897c79": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-tato.jpg",
-            "link": "shopify:\/\/collections\/tato",
+            "image": "shopify://shop_images/logo-tato.jpg",
+            "link": "shopify://collections/tato",
             "link_blank": false
           }
         },
         "8ca2c1ca-771c-47a5-90b0-20d58e45557a": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-tom_dixon.jpg",
-            "link": "shopify:\/\/collections\/tom-dixon",
+            "image": "shopify://shop_images/logo-tom_dixon.jpg",
+            "link": "shopify://collections/tom-dixon",
             "link_blank": false
           }
         },
         "c1b0856c-919b-4cea-8607-e3b1e63b5450": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-tom_rossao.jpg",
-            "link": "shopify:\/\/collections\/tom-rossau",
+            "image": "shopify://shop_images/logo-tom_rossao.jpg",
+            "link": "shopify://collections/tom-rossau",
             "link_blank": false
           }
         },
         "a8c51488-12eb-46f7-b060-d4822441f18c": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-werner.jpg",
-            "link": "shopify:\/\/collections\/werner",
+            "image": "shopify://shop_images/logo-werner.jpg",
+            "link": "shopify://collections/werner",
             "link_blank": false
           }
         }
@@ -1066,7 +1073,7 @@
       "type": "dynamic-custom-liquid",
       "disabled": true,
       "settings": {
-        "custom_liquid": "<h2 class=\"home-section--title\">REVIEWS<\/h2>\n<div id=\"stamped-reviews-widget\" data-widget-type=\"full-page\" data-product-image=\"true\" data-label-subtitle=\"Reviews\" data-style-color-star=\"#e0b21d\" data-style-color-text=\"#454545\" data-style-color-link=\"#000000\"><\/div>"
+        "custom_liquid": "<h2 class=\"home-section--title\">REVIEWS</h2>\n<div id=\"stamped-reviews-widget\" data-widget-type=\"full-page\" data-product-image=\"true\" data-label-subtitle=\"Reviews\" data-style-color-star=\"#e0b21d\" data-style-color-text=\"#454545\" data-style-color-link=\"#000000\"></div>"
       }
     }
   },
